@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 프롬프트 엔지니어링 - Design Theory Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .content-page {
+            padding: var(--spacing-lg) 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg) 0;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border-radius: var(--radius-lg);
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .content-section {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--accent-primary);
+        }
+        
+        .content-section h3 {
+            font-size: 1.25rem;
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .prompt-box {
+            background-color: var(--bg-secondary);
+            border-left: 4px solid #8b5cf6;
+            padding: var(--spacing-sm);
+            margin: var(--spacing-sm) 0;
+            border-radius: var(--radius-sm);
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+        }
+        
+        .tip-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: var(--spacing-sm);
+            margin: var(--spacing-sm) 0;
+            border-radius: var(--radius-sm);
+        }
+        
+        [data-theme="dark"] .tip-box {
+            background-color: #052e16;
+        }
+        
+        .example-grid {
+            display: grid;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-sm);
+        }
+        
+        .example-item {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-sm);
+        }
+        
+        .example-item strong {
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🎨 Design Theory Hub</h1>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">
+                <span class="icon">🌙</span>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="메뉴">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="color-theory.html">색상 이론</a></li>
+                <li><a href="lighting.html">조명 이론</a></li>
+                <li><a href="composition.html">구도</a></li>
+                <li><a href="typography.html">타이포그래피</a></li>
+                <li><a href="ai-prompts.html" class="active">AI 프롬프트</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 컨텐츠 -->
+    <main class="content-page container">
+        <div class="page-header">
+            <h1>🤖 AI 프롬프트 엔지니어링</h1>
+            <p>효과적인 AI 이미지/비디오 생성을 위한 프롬프트 작성법</p>
+        </div>
+
+        <div class="content-section">
+            <h2>1. AI 이미지 생성 프롬프트 구조</h2>
+            
+            <h3>1.1 기본 구조 (5단계)</h3>
+            
+            <div class="example-grid">
+                <div class="example-item">
+                    <strong>1. Subject (주제)</strong>
+                    <p>무엇을 그릴 것인가? (인물, 오브젝트, 장면)</p>
+                </div>
+                
+                <div class="example-item">
+                    <strong>2. Style (스타일)</strong>
+                    <p>어떤 스타일인가? (사실적, 일러스트, 3D 렌더)</p>
+                </div>
+                
+                <div class="example-item">
+                    <strong>3. Lighting (조명)</strong>
+                    <p>어떤 조명인가? (자연광, 스튜디오 조명, 네온)</p>
+                </div>
+                
+                <div class="example-item">
+                    <strong>4. Composition (구도)</strong>
+                    <p>어떤 각도/프레이밍? (클로즈업, 와이드, 앵글)</p>
+                </div>
+                
+                <div class="example-item">
+                    <strong>5. Quality Tags (품질 태그)</strong>
+                    <p>품질 향상 키워드 (8K, detailed, professional)</p>
+                </div>
+            </div>
+
+            <h3>1.2 완성 프롬프트 예시</h3>
+            
+            <div class="prompt-box">
+                A futuristic cyberpunk cityscape at night, neon lights reflecting on wet streets, 
+                cinematic lighting with volumetric fog, wide-angle shot from elevated perspective, 
+                rendered in Unreal Engine 5, octane render, 8K, highly detailed, photorealistic
+            </div>
+            
+            <div class="tip-box">
+                <strong>✅ 분석:</strong>
+                <br>• Subject: futuristic cyberpunk cityscape
+                <br>• Style: photorealistic, rendered in UE5
+                <br>• Lighting: neon lights, volumetric fog
+                <br>• Composition: wide-angle, elevated perspective
+                <br>• Quality: 8K, highly detailed, octane render
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>2. 효과적인 키워드 라이브러리</h2>
+            
+            <h3>2.1 카메라 & 렌즈 용어</h3>
+            <ul>
+                <li><strong>거리:</strong> extreme close-up, close-up, medium shot, wide shot, establishing shot</li>
+                <li><strong>앵글:</strong> eye level, low angle, high angle, bird's eye view, worm's eye view</li>
+                <li><strong>렌즈:</strong> 18mm wide angle, 50mm lens, 85mm portrait lens, 200mm telephoto, fisheye</li>
+                <li><strong>효과:</strong> bokeh, depth of field, tilt-shift, lens flare, motion blur</li>
+            </ul>
+
+            <h3>2.2 조명 키워드</h3>
+            <ul>
+                <li><strong>스타일:</strong> cinematic lighting, dramatic lighting, soft lighting, hard lighting</li>
+                <li><strong>시간:</strong> golden hour, blue hour, midday sun, sunset, twilight</li>
+                <li><strong>분위기:</strong> moody lighting, rim lighting, Rembrandt lighting, volumetric lighting</li>
+                <li><strong>색온도:</strong> warm lighting, cool lighting, neon glow, god rays</li>
+            </ul>
+
+            <h3>2.3 스타일 & 아트 레퍼런스</h3>
+            <ul>
+                <li><strong>3D 렌더:</strong> octane render, cinema 4d render, unreal engine 5, v-ray, redshift</li>
+                <li><strong>아트 스타일:</strong> photorealistic, hyperrealistic, stylized, low poly, cel-shaded</li>
+                <li><strong>아티스트:</strong> Beeple style, by Ash Thorp, trending on ArtStation</li>
+                <li><strong>장르:</strong> cyberpunk, sci-fi, fantasy, steampunk, brutalism</li>
+            </ul>
+
+            <h3>2.4 품질 향상 태그</h3>
+            <ul>
+                <li><strong>해상도:</strong> 8K, 4K, ultra HD, high resolution</li>
+                <li><strong>디테일:</strong> highly detailed, intricate details, sharp focus, crisp</li>
+                <li><strong>전문성:</strong> professional photography, studio quality, award-winning</li>
+                <li><strong>기술:</strong> ray tracing, global illumination, subsurface scattering</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>3. 실전 프롬프트 예제</h2>
+            
+            <h3>3.1 제품 렌더링</h3>
+            <div class="prompt-box">
+                Professional product photography of a sleek modern smartphone, floating in mid-air, 
+                studio lighting with soft shadows, gradient background from blue to purple, 
+                shot with 85mm lens, shallow depth of field, 4K commercial photography, 
+                ultra-clean, minimalist composition
+            </div>
+
+            <h3>3.2 캐릭터 디자인</h3>
+            <div class="prompt-box">
+                3D character concept art, cyberpunk warrior with glowing neon armor, 
+                full body shot, dramatic rim lighting, futuristic city background, 
+                rendered in Unreal Engine 5 with ray tracing, highly detailed costume design, 
+                ArtStation trending, Beeple style, cinematic composition
+            </div>
+
+            <h3>3.3 환경 디자인</h3>
+            <div class="prompt-box">
+                Sci-fi underground laboratory interior, massive scale architecture, 
+                volumetric fog with cyan and orange lighting, wide-angle shot, 
+                intricate mechanical details, holographic displays, 
+                concept art style, matte painting, cinematic atmosphere, 
+                rendered in octane, 8K wallpaper
+            </div>
+
+            <h3>3.4 추상/아트</h3>
+            <div class="prompt-box">
+                Abstract geometric composition, flowing liquid metal surfaces, 
+                iridescent colors shifting from gold to purple, 
+                soft studio lighting with reflections, macro photography style, 
+                cinema 4d render, procedural texture, minimalist aesthetic, 
+                4K digital art, trending on Behance
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>4. AI 비디오 생성 프롬프트</h2>
+            
+            <h3>4.1 카메라 무브먼트 지정</h3>
+            <ul>
+                <li><strong>Static:</strong> camera stays still, locked-off shot</li>
+                <li><strong>Pan:</strong> camera pans left/right, horizontal movement</li>
+                <li><strong>Tilt:</strong> camera tilts up/down, vertical movement</li>
+                <li><strong>Zoom:</strong> slow zoom in/out, dolly shot</li>
+                <li><strong>Orbit:</strong> camera orbits around subject, 360-degree rotation</li>
+                <li><strong>Drone:</strong> aerial drone shot, flying through scene</li>
+            </ul>
+
+            <h3>4.2 비디오 프롬프트 예시</h3>
+            <div class="prompt-box">
+                Cinematic drone shot flying through a neon-lit cyberpunk city at night, 
+                camera moves forward between skyscrapers, rain falling, 
+                reflections on wet streets below, volumetric fog, 
+                slow smooth motion, 24fps cinematic feel
+            </div>
+
+            <h3>4.3 속도와 템포</h3>
+            <ul>
+                <li><strong>속도:</strong> slow motion, real-time, time-lapse, hyper-lapse</li>
+                <li><strong>템포:</strong> smooth motion, dynamic motion, fast-paced, calm and slow</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>5. 네거티브 프롬프트 (Negative Prompts)</h2>
+            
+            <h3>5.1 일반적인 품질 문제 제거</h3>
+            <div class="prompt-box">
+                ugly, blurry, low quality, distorted, deformed, low resolution, 
+                pixelated, artifacts, watermark, text, signature, out of frame, 
+                bad anatomy, poorly drawn, amateur
+            </div>
+
+            <h3>5.2 3D 렌더링 특화</h3>
+            <div class="prompt-box">
+                bad topology, stretched polygons, z-fighting, clipping, 
+                unrealistic lighting, flat shading, low poly (if not intended), 
+                missing textures, UV stretching
+            </div>
+
+            <div class="tip-box">
+                <strong>💡 Pro Tip:</strong> 네거티브 프롬프트는 원하지 않는 요소를 명시적으로 제거하는 데 사용됩니다. 
+                특히 Stable Diffusion 계열 모델에서 효과적입니다.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>6. 고급 테크닉</h2>
+            
+            <h3>6.1 가중치 조정 (Weighting)</h3>
+            <ul>
+                <li><strong>강조:</strong> (keyword:1.5) - 특정 키워드 강조</li>
+                <li><strong>약화:</strong> (keyword:0.5) - 영향력 감소</li>
+                <li><strong>예시:</strong> (cinematic lighting:1.3), (neon glow:1.5), (grain:0.3)</li>
+            </ul>
+
+            <h3>6.2 스타일 믹싱</h3>
+            <div class="prompt-box">
+                50% photorealistic + 50% anime style, hybrid rendering technique, 
+                realistic lighting with stylized character proportions
+            </div>
+
+            <h3>6.3 시드(Seed) 활용</h3>
+            <ul>
+                <li>같은 시드 = 유사한 구도/구성</li>
+                <li>일관성 있는 시리즈 제작에 유용</li>
+                <li>마음에 드는 결과의 시드를 저장하여 재활용</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>7. 플랫폼별 최적화 팁</h2>
+            
+            <h3>7.1 Midjourney</h3>
+            <ul>
+                <li>간결하고 명확한 키워드 선호</li>
+                <li>--ar 16:9 등 파라미터 활용</li>
+                <li>--stylize, --chaos 값 조정</li>
+            </ul>
+
+            <h3>7.2 Stable Diffusion</h3>
+            <ul>
+                <li>긴 디테일한 프롬프트 효과적</li>
+                <li>네거티브 프롬프트 적극 활용</li>
+                <li>LoRA, ControlNet 등 확장 도구 활용</li>
+            </ul>
+
+            <h3>7.3 DALL-E 3</h3>
+            <ul>
+                <li>자연어 문장 형태로 작성 가능</li>
+                <li>스토리텔링 방식 효과적</li>
+                <li>텍스트 렌더링 우수</li>
+            </ul>
+        </div>
+
+        <!-- 다음/이전 네비게이션 -->
+        <div style="display: flex; justify-content: space-between; margin-top: var(--spacing-lg);">
+            <a href="color-theory.html" class="btn btn-secondary">← 색상 이론</a>
+            <a href="../index.html" class="btn btn-primary">홈으로 →</a>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme-toggle.js"></script>
+</body>
+</html>

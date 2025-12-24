@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Design Theory Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .content-page {
+            padding: var(--spacing-lg) 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg) 0;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: white;
+            border-radius: var(--radius-lg);
+        }
+        
+        .about-section {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .about-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--accent-primary);
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-sm);
+        }
+        
+        .social-card {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: transform var(--transition-fast);
+        }
+        
+        .social-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-card .icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .social-card a {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🎨 Design Theory Hub</h1>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">
+                <span class="icon">🌙</span>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="메뉴">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="color-theory.html">색상 이론</a></li>
+                <li><a href="lighting.html">조명 이론</a></li>
+                <li><a href="composition.html">구도</a></li>
+                <li><a href="typography.html">타이포그래피</a></li>
+                <li><a href="ai-prompts.html">AI 프롬프트</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 컨텐츠 -->
+    <main class="content-page container">
+        <div class="page-header">
+            <h1>👋 About Design Theory Hub</h1>
+            <p>3D 아티스트를 위한 디자인 이론 가이드</p>
+        </div>
+
+        <div class="about-section">
+            <h2>🎯 프로젝트 소개</h2>
+            <p>
+                Design Theory Hub는 3D 아티스트, 모션 그래픽 디자이너, 그리고 AI 크리에이터를 위한 
+                실무 중심 디자인 이론 웹사이트입니다.
+            </p>
+            <p style="margin-top: 1rem;">
+                색상 이론, 조명, 구도부터 최신 AI 프롬프트 엔지니어링까지, 
+                실제 작업에서 바로 활용할 수 있는 지식을 체계적으로 정리했습니다.
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>✨ 특징</h2>
+            <ul style="margin-left: var(--spacing-md); color: var(--text-secondary);">
+                <li>🎨 <strong>15개 카테고리</strong> - 디자인 이론 전 분야 커버</li>
+                <li>🌓 <strong>다크모드 지원</strong> - 편안한 독서 경험</li>
+                <li>📱 <strong>완전한 반응형</strong> - 모든 디바이스 최적화</li>
+                <li>⚡ <strong>빠른 로딩</strong> - 가볍고 효율적인 구조</li>
+                <li>🤖 <strong>AI 시대 대응</strong> - 최신 AI 도구 활용법</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>👤 제작자</h2>
+            <p style="margin-bottom: var(--spacing-sm);">
+                <strong>Panda Universe (이덕준)</strong><br>
+                3D 모션그래픽 아티스트 및 미디어 아트 크리에이터
+            </p>
+            <p style="color: var(--text-secondary);">
+                Cinema 4D, Unreal Engine 등을 활용한 전문 콘텐츠 제작자로, 
+                YouTube 채널 'Panda Universe'를 운영하며 4,240명의 구독자에게 
+                3D 교육 콘텐츠를 제공하고 있습니다.
+            </p>
+            
+            <div class="social-grid">
+                <div class="social-card">
+                    <div class="icon">📺</div>
+                    <h3>YouTube</h3>
+                    <a href="https://www.youtube.com/@PandaUniverse" target="_blank">
+                        Panda Universe
+                    </a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        4,240 구독자<br>475개 영상
+                    </p>
+                </div>
+
+                <div class="social-card">
+                    <div class="icon">🎨</div>
+                    <h3>Behance</h3>
+                    <a href="https://www.behance.net/pandauniverse" target="_blank">
+                        Portfolio
+                    </a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        12개 프로젝트<br>15,000+ 조회수
+                    </p>
+                </div>
+
+                <div class="social-card">
+                    <div class="icon">💻</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com" target="_blank">
+                        Source Code
+                    </a>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                        오픈소스<br>MIT License
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h2>🛠️ 기술 스택</h2>
+            <p style="color: var(--text-secondary);">
+                이 사이트는 순수 HTML, CSS, JavaScript로 제작되었으며, 
+                외부 라이브러리나 프레임워크 없이 GitHub Pages에서 호스팅됩니다.
+            </p>
+            <ul style="margin-left: var(--spacing-md); margin-top: var(--spacing-sm); color: var(--text-secondary);">
+                <li>✅ 외부 의존성 없음</li>
+                <li>✅ 빠른 로딩 속도</li>
+                <li>✅ 완전한 반응형 디자인</li>
+                <li>✅ SEO 최적화</li>
+                <li>✅ 접근성 고려</li>
+            </ul>
+        </div>
+
+        <div class="about-section">
+            <h2>📝 콘텐츠 업데이트</h2>
+            <p style="color: var(--text-secondary);">
+                이 사이트는 지속적으로 업데이트되며, 
+                새로운 디자인 이론과 AI 도구 활용법이 추가될 예정입니다.
+            </p>
+            <p style="margin-top: 1rem; color: var(--text-secondary);">
+                <strong>최근 업데이트:</strong> 2024년 12월
+            </p>
+        </div>
+
+        <div class="about-section">
+            <h2>📄 라이선스</h2>
+            <p style="color: var(--text-secondary);">
+                MIT License - 자유롭게 사용, 수정, 배포 가능합니다.<br>
+                GitHub에서 소스 코드를 확인하고 기여하실 수 있습니다.
+            </p>
+        </div>
+
+        <div class="about-section" style="text-align: center; padding: var(--spacing-lg);">
+            <h2 style="margin-bottom: var(--spacing-md);">🤝 함께 만들어가요</h2>
+            <p style="margin-bottom: var(--spacing-md); color: var(--text-secondary);">
+                이 프로젝트는 커뮤니티와 함께 성장합니다.<br>
+                오류 수정, 콘텐츠 제안, 새로운 아이디어 등 언제든 환영합니다!
+            </p>
+            <a href="https://github.com" target="_blank" class="btn btn-primary">
+                GitHub에서 보기 →
+            </a>
+        </div>
+
+        <!-- 홈으로 -->
+        <div style="text-align: center; margin-top: var(--spacing-lg);">
+            <a href="../index.html" class="btn btn-secondary">← 홈으로 돌아가기</a>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme-toggle.js"></script>
+</body>
+</html>

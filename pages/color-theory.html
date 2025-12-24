@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 이론 - Design Theory Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <style>
+        .content-page {
+            padding: var(--spacing-lg) 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-lg) 0;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            color: white;
+            border-radius: var(--radius-lg);
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .page-header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+        }
+        
+        .content-section {
+            background-color: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--accent-primary);
+        }
+        
+        .content-section h3 {
+            font-size: 1.25rem;
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .content-section ul {
+            margin-left: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .content-section li {
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-secondary);
+        }
+        
+        .tip-box {
+            background-color: var(--bg-secondary);
+            border-left: 4px solid var(--accent-primary);
+            padding: var(--spacing-sm);
+            margin: var(--spacing-sm) 0;
+            border-radius: var(--radius-sm);
+        }
+        
+        .tip-box strong {
+            color: var(--accent-primary);
+        }
+        
+        code {
+            background-color: var(--bg-secondary);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🎨 Design Theory Hub</h1>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">
+                <span class="icon">🌙</span>
+            </button>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="메뉴">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">홈</a></li>
+                <li><a href="color-theory.html" class="active">색상 이론</a></li>
+                <li><a href="lighting.html">조명 이론</a></li>
+                <li><a href="composition.html">구도</a></li>
+                <li><a href="typography.html">타이포그래피</a></li>
+                <li><a href="ai-prompts.html">AI 프롬프트</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 컨텐츠 -->
+    <main class="content-page container">
+        <div class="page-header">
+            <h1>🎨 색상 이론 (Color Theory)</h1>
+            <p>3D 렌더링과 AI 생성에서의 색상 활용법</p>
+        </div>
+
+        <div class="content-section">
+            <h2>1. 색상 기초</h2>
+            
+            <h3>1.1 색상환과 색상 모델</h3>
+            <ul>
+                <li><strong>RGB vs CMYK vs HSV/HSB</strong> - 디지털과 인쇄의 차이</li>
+                <li><strong>3D 렌더링에서의 색공간</strong> - sRGB, Linear, ACES</li>
+                <li><strong>Gamma Correction</strong> - 올바른 색상 표현</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 실무 팁:</strong> Cinema 4D와 Octane에서는 Linear 워크플로우를 사용하세요. 
+                텍스처를 불러올 때 sRGB 설정을 확인하는 것이 중요합니다.
+            </div>
+
+            <h3>1.2 색상 조화 (Color Harmony)</h3>
+            <ul>
+                <li><strong>보색 (Complementary)</strong> - 색상환에서 정반대 위치</li>
+                <li><strong>유사색 (Analogous)</strong> - 인접한 색상들의 조합</li>
+                <li><strong>삼각 배색 (Triadic)</strong> - 120도 간격의 세 가지 색</li>
+                <li><strong>분할 보색 (Split-Complementary)</strong> - 보색의 양옆 색상</li>
+                <li><strong>사각 배색 (Tetradic)</strong> - 두 쌍의 보색</li>
+            </ul>
+
+            <h3>1.3 색상 심리학</h3>
+            <ul>
+                <li><strong>빨강</strong> - 열정, 에너지, 위험</li>
+                <li><strong>파랑</strong> - 신뢰, 평온, 전문성</li>
+                <li><strong>노랑</strong> - 낙관, 주의, 창의성</li>
+                <li><strong>초록</strong> - 자연, 성장, 균형</li>
+                <li><strong>보라</strong> - 고급스러움, 신비, 창의성</li>
+            </ul>
+        </div>
+
+        <div class="content-section" id="temperature">
+            <h2>2. 색온도 (Color Temperature)</h2>
+            
+            <h3>2.1 Kelvin 스케일 이해</h3>
+            <ul>
+                <li><strong>1800K-2000K</strong> - 촛불, 따뜻한 백열등</li>
+                <li><strong>2700K-3000K</strong> - 일반 백열등, 아늑한 실내</li>
+                <li><strong>5000K-5500K</strong> - 정오의 햇빛, 자연광</li>
+                <li><strong>6500K-7500K</strong> - 흐린 날, 차가운 느낌</li>
+                <li><strong>10000K+</strong> - 푸른 하늘, 극도로 차가운 느낌</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>💡 시간대 표현:</strong>
+                <br>• 아침: 4000-5000K (부드러운 주황-노랑)
+                <br>• 정오: 5500-6000K (중성 흰색)
+                <br>• 석양: 2500-3500K (따뜻한 주황-빨강)
+                <br>• 밤: 2000-3000K (인공 조명) 또는 7000K+ (달빛)
+            </div>
+
+            <h3>2.2 무드와 분위기 연출</h3>
+            <ul>
+                <li><strong>따뜻한 톤 (Warm)</strong> - 편안함, 친밀감, 노스탤지어</li>
+                <li><strong>차가운 톤 (Cool)</strong> - 차분함, 전문성, 미래지향적</li>
+                <li><strong>대비 활용</strong> - 따뜻한 주광 + 차가운 보조광</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>3. 실무 적용</h2>
+            
+            <h3>3.1 3D 렌더링에서의 색상</h3>
+            <ul>
+                <li><strong>PBR 워크플로우</strong> - Albedo 맵 제작 시 주의사항</li>
+                <li><strong>올바른 Albedo 값</strong> - 너무 어둡거나 밝지 않게 (30-240 범위)</li>
+                <li><strong>HDR 환경과 색상 관계</strong> - 환경광이 오브젝트 색상에 미치는 영향</li>
+            </ul>
+
+            <h3>3.2 AI 이미지 생성 시 색상 제어</h3>
+            
+            <div class="tip-box">
+                <strong>🤖 프롬프트 예시:</strong>
+                <br>• <code>"warm color palette, golden hour lighting"</code>
+                <br>• <code>"cool blue tones, cyberpunk color scheme"</code>
+                <br>• <code>"monochromatic red composition"</code>
+                <br>• <code>"complementary orange and teal color grading"</code>
+            </div>
+
+            <h3>3.3 Color Grading 키워드</h3>
+            <ul>
+                <li><strong>무드</strong> - cinematic, moody, vibrant, muted, desaturated</li>
+                <li><strong>톤</strong> - warm tones, cool tones, earth tones</li>
+                <li><strong>스타일</strong> - teal and orange, bleach bypass, cross-processed</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>4. 추천 도구 & 리소스</h2>
+            <ul>
+                <li><strong>Adobe Color</strong> - 색상 조화 생성기</li>
+                <li><strong>Coolors.co</strong> - 팔레트 생성기</li>
+                <li><strong>Paletton</strong> - 색상 조합 시뮬레이터</li>
+                <li><strong>Color Hunt</strong> - 큐레이션된 색상 팔레트</li>
+            </ul>
+        </div>
+
+        <!-- 다음/이전 네비게이션 -->
+        <div style="display: flex; justify-content: space-between; margin-top: var(--spacing-lg);">
+            <a href="../index.html" class="btn btn-secondary">← 홈으로</a>
+            <a href="lighting.html" class="btn btn-primary">조명 이론 →</a>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/theme-toggle.js"></script>
+</body>
+</html>
