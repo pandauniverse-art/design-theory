@@ -2,48 +2,76 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UX/Psychology - Design Theory Hub</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
-        .page-header {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white; padding: 6rem 0; text-align: center; border-radius: 0 0 24px 24px; margin-bottom: 4rem;
-        }
-        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 800; }
-        .content-section { background: white; border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; }
-        .content-section h2 { color: #10b981; margin-bottom: 1.5rem; font-size: 1.75rem; font-weight: 700; }
+        /* Green Theme */
+        .page-header { background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem; }
+        .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .article-title { color: #047857; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .director-note { background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
+        .note-title { font-weight: 700; color: #047857; margin-bottom: 0.5rem; display: block; }
+        .tag-theory { background: #d1fae5; color: #065f46; }
+        .tag-practice { background: #dcfce7; color: #15803d; }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <a href="../index.html" class="logo">Design Theory Hub</a>
-             <ul class="nav-menu">
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="foundations.html" class="nav-link">Foundations</a></li>
+                <li><a href="ux-psychology.html" class="nav-link" style="color:#10b981; font-weight:bold;">UX/Psychology</a></li>
                 <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="page-header">
+    <header class="page-header">
         <div class="container">
             <h1>🧠 UX/Psychology</h1>
-            <p>사용자의 행동을 유도하고 인지 부하를 줄이는 심리학 법칙입니다.</p>
+            <p>사용자는 논리적으로 행동하지 않습니다.<br>행동 경제학과 인지 심리학을 통해 사용자의 무의식을 설계하는 법.</p>
         </div>
-    </div>
+    </header>
 
     <main class="container">
-        <div class="content-section">
-            <h2>1. 힉의 법칙 (Hick's Law)</h2>
-            <p>선택지가 많을수록 사용자가 결정하는 데 걸리는 시간이 늘어난다는 법칙입니다.</p>
-        </div>
-        <div class="content-section">
-            <h2>2. 피츠의 법칙 (Fitts's Law)</h2>
-            <p>대상까지의 거리가 가까울수록, 크기가 클수록 도달하는 시간이 줄어듭니다.</p>
-        </div>
+        <article class="article-card">
+            <span class="tag tag-theory">Mental Model</span>
+            <span class="tag tag-practice">Standardization</span>
+            <h2 class="article-title">1. 제이콥의 법칙 (Jakob's Law)</h2>
+            <p class="article-desc">
+                "사용자는 당신의 사이트보다 다른 사이트에서 더 많은 시간을 보낸다."<br>
+                즉, 사용자는 새로운 학습 없이 기존에 익숙한 방식대로 작동하기를 기대합니다. 독창성(Creativity)보다 익숙함(Familiarity)이 사용성에는 더 유리할 수 있습니다.
+            </p>
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: 휠을 재발명하지 마라</span>
+                <p style="color:#064e3b;">
+                    검색창은 돋보기 아이콘, 장바구니는 우측 상단. 이 불문율을 깨는 순간 사용자는 이탈합니다.
+                    창의성은 레이아웃 구조가 아니라, 콘텐츠와 마이크로 인터랙션에서 발휘하세요.
+                </p>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <span class="tag tag-theory">Fitts's Law</span>
+            <span class="tag tag-practice">Usability</span>
+            <h2 class="article-title">2. 피츠의 법칙 (Fitts's Law)</h2>
+            <p class="article-desc">
+                "목표물에 도달하는 시간은 거리와 크기에 좌우된다."<br>
+                중요한 버튼일수록 **크게 만들고(Size)**, **가까이 배치(Distance)**해야 합니다.
+            </p>
+            <ul style="list-style: disc; padding-left: 1.5rem; color: #4b5563;">
+                <li><strong>터치 타겟:</strong> 모바일 버튼의 최소 터치 영역은 <strong>44x44pt (iOS 기준)</strong> 또는 <strong>48x48dp (Android 기준)</strong> 이상이어야 합니다.</li>
+                <li><strong>엄지 존 (Thumb Zone):</strong> 모바일 화면 하단에 주요 기능을 배치하는 이유입니다.</li>
+            </ul>
+        </article>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html>
