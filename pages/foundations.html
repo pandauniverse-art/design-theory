@@ -8,67 +8,137 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
-        /* 페이지별 헤더 색상 오버라이드 (Foundations: Blue) */
+        /* Header Theme: Blue */
         .page-header {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: white;
-            padding: 6rem 0;
-            text-align: center;
-            border-radius: 0 0 24px 24px;
-            margin-bottom: 4rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem;
         }
-        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; }
-        .page-header p { font-size: 1.25rem; opacity: 0.9; }
+        .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+
+        /* Article Styles */
+        .article-card {
+            background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem;
+            border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .article-title { color: #1e40af; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .article-desc { font-size: 1.1rem; color: #4b5563; margin-bottom: 2rem; line-height: 1.7; }
         
-        .content-section {
-            background: white;
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        /* Pro Tip Box */
+        .director-note {
+            background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;
         }
-        .content-section h2 { color: #3b82f6; margin-bottom: 1.5rem; font-size: 1.75rem; }
+        .note-title { font-weight: 700; color: #1e40af; margin-bottom: 0.5rem; display: block; }
+        .note-content { font-size: 0.95rem; color: #1e3a8a; }
+
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
+        .tag-theory { background: #e0e7ff; color: #4338ca; }
+        .tag-practice { background: #dcfce7; color: #15803d; }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <a href="../index.html" class="logo">Design Theory Hub</a>
+            <div class="menu-toggle">☰</div>
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="foundations.html" class="nav-link">Theory</a></li>
+                <li><a href="foundations.html" class="nav-link" style="color:var(--primary); font-weight:bold;">Foundations</a></li>
+                <li><a href="elements.html" class="nav-link">Elements</a></li>
                 <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="page-header">
+    <header class="page-header">
         <div class="container">
             <h1>📐 Foundations</h1>
-            <p>디자인의 흔들리지 않는 뼈대, 핵심 원리를 탐구합니다.</p>
+            <p>디자인의 본질적 뼈대. <br>시각적 문법(Visual Grammar)과 수학적 원리를 실무 관점에서 재해석합니다.</p>
         </div>
-    </div>
+    </header>
 
     <main class="container">
-        <div class="content-section">
-            <h2>1. 게슈탈트 이론 (Gestalt Psychology)</h2>
-            <p>인간이 시각 정보를 그룹화하여 인식하는 방식을 설명하는 심리학 이론입니다.</p>
-            <ul>
-                <li><strong>유사성의 원리:</strong> 비슷한 요소끼리 그룹으로 인식</li>
-                <li><strong>근접성의 원리:</strong> 가까이 있는 요소끼리 그룹으로 인식</li>
-                <li><strong>연속성의 원리:</strong> 선이나 흐름을 따라 요소를 인식</li>
-            </ul>
-        </div>
+        <article class="article-card">
+            <span class="tag tag-theory">Theory</span>
+            <span class="tag tag-practice">UI/UX</span>
+            <h2 class="article-title">1. 게슈탈트 심리학 (Gestalt Psychology)</h2>
+            <p class="article-desc">
+                "전체는 부분의 합과 다르다." 사용자가 시각 정보를 개별 요소가 아닌 '그룹'으로 인식하는 인지 방식을 설명합니다.
+                복잡한 UI를 단순하고 직관적으로 만드는 핵심 이론입니다.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">🔹 근접성의 원리 (Proximity)</h3>
+                    <p style="color:#666;">서로 가까이 있는 요소들은 같은 그룹으로 인식됩니다. 여백(White Space)만으로도 선 없이 그룹핑이 가능합니다.</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">🔹 공통 영역의 원리 (Common Region)</h3>
+                    <p style="color:#666;">같은 배경색이나 테두리 안에 있는 요소들은 강력하게 그룹화됩니다. 카드 UI 디자인의 기초가 됩니다.</p>
+                </div>
+            </div>
 
-        <div class="content-section">
-            <h2>2. 그리드 시스템 (Grid Systems)</h2>
-            <p>화면을 규칙적으로 분할하여 정보를 질서 있게 배치하는 체계입니다. 모듈러 그리드, 컬럼 그리드 등이 있습니다.</p>
-        </div>
-        
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: 실무 적용</span>
+                <p class="note-content">
+                    복잡한 대시보드를 디자인할 때 선(Line)을 긋는 것을 멈추세요. 대신 여백(Margin)을 조절하세요.
+                    관련된 항목끼리는 8px, 다른 그룹과는 24px 이상 띄우는 것만으로도 사용자의 인지 부하가 획기적으로 줄어듭니다.
+                </p>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <span class="tag tag-theory">Layout</span>
+            <span class="tag tag-practice">Responsive</span>
+            <h2 class="article-title">2. 그리드 시스템 (Grid Systems)</h2>
+            <p class="article-desc">
+                정보를 체계적으로 배치하기 위한 가상의 격자 구조입니다. 인쇄 매체의 모듈러 그리드에서 시작되어, 
+                현재는 웹/앱 환경의 반응형 디자인을 위한 필수 규칙이 되었습니다.
+            </p>
+            
+            <ul style="list-style: disc; padding-left: 1.5rem; color: #4b5563; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>컬럼 그리드 (Column Grid):</strong> 화면을 세로 열(Column)로 나누어 배치. (PC: 12컬럼, Tablet: 8컬럼, Mobile: 4컬럼 표준)</li>
+                <li style="margin-bottom: 0.5rem;"><strong>거터 (Gutter):</strong> 컬럼 사이의 간격. 요소 간의 숨구멍 역할을 합니다.</li>
+            </ul>
+
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: 8pt Grid System</span>
+                <p class="note-content">
+                    디지털 프로덕트 디자인에서는 '8pt 그리드'가 표준입니다. 모든 마진, 패딩, 크기를 8의 배수(8, 16, 24, 32...)로 설정하세요. 
+                    다양한 스크린 해상도에서 픽셀이 깨지지 않고 렌더링되는 가장 안전한 숫자입니다.
+                </p>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <span class="tag tag-theory">Visual Weight</span>
+            <span class="tag tag-practice">Conversion</span>
+            <h2 class="article-title">3. 시각적 위계 (Visual Hierarchy)</h2>
+            <p class="article-desc">
+                사용자의 시선이 머무는 순서를 설계합니다. 크기, 색상, 대비를 통해 
+                "무엇을 먼저 보고, 무엇을 나중에 볼지" 디자이너가 통제해야 합니다.
+            </p>
+            
+            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">👁️ 시선 추적 패턴 (Eye Tracking)</h3>
+                <ul style="margin-bottom: 0;">
+                    <li style="margin-bottom: 0.5rem;"><strong>F-Pattern:</strong> 텍스트 중심의 웹사이트에서 사용자가 상단과 좌측을 훑어보는 패턴.</li>
+                    <li><strong>Z-Pattern:</strong> 이미지 중심의 랜딩 페이지에서 시선이 좌상단 → 우상단 → 좌하단 → 우하단으로 이동하는 패턴. CTA 버튼은 Z의 끝(우하단)이나 중앙에 배치해야 합니다.</li>
+                </ul>
+            </div>
+        </article>
+
         <div style="text-align: center; margin: 4rem 0;">
-            <a href="../index.html" style="padding: 1rem 2rem; background: #e5e7eb; border-radius: 8px; font-weight: 600;">메인으로 돌아가기</a>
+            <a href="../index.html" class="btn-link" style="padding: 1rem 3rem; background: #e5e7eb; border-radius: 50px; color: #4b5563;">메인으로 돌아가기</a>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Design Theory Hub. Contents curated by Gemini.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>
