@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Theory Hub</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    </head>
+</head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">Design Theory Hub</a>
+            
+            <div class="menu-toggle">☰</div>
+
             <ul class="nav-menu">
                 <li class="dropdown">
                     <a href="#" class="nav-link">Theory ▼</a>
@@ -31,19 +35,19 @@
                     <a href="#" class="nav-link">Trends ▼</a>
                     <ul class="dropdown-menu">
                         <li><a href="pages/trends.html">🚀 Trends (트렌드)</a></li>
-                        <li><a href="#">🤖 AI Design</a></li>
+                        <li><a href="pages/ai-prompts.html">🤖 AI Design</a></li>
                     </ul>
                 </li>
                 <li><a href="pages/library.html" class="nav-link">Library</a></li>
                 <li><a href="pages/about.html" class="nav-link">About</a></li>
             </ul>
-            <div class="menu-toggle">☰</div> </div>
+        </div>
     </nav>
 
     <header class="hero">
         <div class="container">
             <h1>Design Theory for Everyone</h1>
-            <p>디자인의 기본 원리부터 최신 AI 트렌드까지, 이론과 실무를 연결합니다.</p>
+            <p>디자인의 기본 원리부터 최신 AI 트렌드까지,<br>이론과 실무를 연결하는 3D/모션 디자이너의 가이드.</p>
             
             <div class="hero-stats">
                 <div class="stat-item">
@@ -67,114 +71,93 @@
         <div class="category-grid-6">
             <div class="category-card-large foundations">
                 <div class="card-icon">📐</div>
-                <h3 class="card-title-en">Foundations</h3>
-                <h4 class="card-title-kr">핵심 원리</h4>
+                <div>
+                    <h3 class="card-title-en">Foundations</h3>
+                    <h4 class="card-title-kr">핵심 원리</h4>
+                </div>
                 <ul class="card-topics">
-                    <li>게슈탈트 이론</li>
-                    <li>그리드 시스템</li>
+                    <li>게슈탈트 이론 (Gestalt)</li>
+                    <li>그리드 시스템 (Grid System)</li>
                     <li>비례와 균형 (황금비)</li>
                 </ul>
-                <a href="pages/foundations.html" class="btn-link">View More →</a>
+                <a href="pages/foundations.html" class="btn-link">Learn More →</a>
             </div>
 
             <div class="category-card-large elements">
                 <div class="card-icon">🎨</div>
-                <h3 class="card-title-en">Elements</h3>
-                <h4 class="card-title-kr">디자인 요소</h4>
+                <div>
+                    <h3 class="card-title-en">Elements</h3>
+                    <h4 class="card-title-kr">디자인 요소</h4>
+                </div>
                 <ul class="card-topics">
                     <li>색채학 (Color Theory)</li>
-                    <li>타이포그래피</li>
-                    <li>형태 심리학</li>
+                    <li>타이포그래피 (Typography)</li>
+                    <li>형태 심리학 (Shape)</li>
                 </ul>
-                <a href="pages/elements.html" class="btn-link">View More →</a>
+                <a href="pages/elements.html" class="btn-link">Learn More →</a>
             </div>
 
             <div class="category-card-large history">
                 <div class="card-icon">📜</div>
-                <h3 class="card-title-en">History</h3>
-                <h4 class="card-title-kr">역사/사조</h4>
+                <div>
+                    <h3 class="card-title-en">History</h3>
+                    <h4 class="card-title-kr">역사/사조</h4>
+                </div>
                 <ul class="card-topics">
                     <li>디자인 역사 흐름</li>
-                    <li>바우하우스</li>
+                    <li>바우하우스 (Bauhaus)</li>
                     <li>모더니즘 vs 포스트모더니즘</li>
                 </ul>
-                <a href="pages/history.html" class="btn-link">View More →</a>
+                <a href="pages/history.html" class="btn-link">Learn More →</a>
             </div>
 
             <div class="category-card-large ux-psychology">
                 <div class="card-icon">🧠</div>
-                <h3 class="card-title-en">UX/Psychology</h3>
-                <h4 class="card-title-kr">사용자 심리</h4>
+                <div>
+                    <h3 class="card-title-en">UX/Psychology</h3>
+                    <h4 class="card-title-kr">사용자 심리</h4>
+                </div>
                 <ul class="card-topics">
                     <li>UX 법칙 (Hick's, Fitts's)</li>
-                    <li>넛지 디자인</li>
+                    <li>넛지 디자인 (Nudge)</li>
                     <li>인지 부하 이론</li>
                 </ul>
-                <a href="pages/ux-psychology.html" class="btn-link">View More →</a>
+                <a href="pages/ux-psychology.html" class="btn-link">Learn More →</a>
             </div>
 
             <div class="category-card-large practical">
                 <div class="card-icon">💼</div>
-                <h3 class="card-title-en">Practical</h3>
-                <h4 class="card-title-kr">실무/크리틱</h4>
+                <div>
+                    <h3 class="card-title-en">Practical</h3>
+                    <h4 class="card-title-kr">실무/크리틱</h4>
+                </div>
                 <ul class="card-topics">
-                    <li>구도 분석</li>
+                    <li>구도 분석 (Composition)</li>
                     <li>디자인 크리틱 방법론</li>
-                    <li>Case Study</li>
+                    <li>실무 Case Study</li>
                 </ul>
-                <a href="pages/practical.html" class="btn-link">View More →</a>
+                <a href="pages/practical.html" class="btn-link">Learn More →</a>
             </div>
 
             <div class="category-card-large trends">
                 <div class="card-icon">🚀</div>
-                <h3 class="card-title-en">Trends</h3>
-                <h4 class="card-title-kr">트렌드/미래</h4>
+                <div>
+                    <h3 class="card-title-en">Trends</h3>
+                    <h4 class="card-title-kr">트렌드/미래</h4>
+                </div>
                 <ul class="card-topics">
                     <li>AI 디자인 & 프롬프트</li>
                     <li>최신 트렌드 리포트</li>
                     <li>Spatial Design (VR/AR)</li>
                 </ul>
-                <a href="pages/trends.html" class="btn-link">View More →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section container bg-light">
-        <h2 class="section-title">Learning Paths</h2>
-        <div class="path-grid">
-            <div class="path-card">
-                <span class="path-level beginner">Beginner</span>
-                <h3>디자인 입문자 코스</h3>
-                <ul class="path-steps">
-                    <li>1. 디자인의 5가지 핵심 원리</li>
-                    <li>2. 색채학 기초 마스터</li>
-                    <li>3. 타이포그래피의 이해</li>
-                </ul>
-            </div>
-            <div class="path-card">
-                <span class="path-level intermediate">Intermediate</span>
-                <h3>UX/UI 심화 코스</h3>
-                <ul class="path-steps">
-                    <li>1. 게슈탈트 심리학 심화</li>
-                    <li>2. UX 심리학 법칙 10선</li>
-                    <li>3. 디자인 시스템 구축</li>
-                </ul>
-            </div>
-            <div class="path-card">
-                <span class="path-level advanced">Advanced</span>
-                <h3>크리에이티브 디렉터 코스</h3>
-                <ul class="path-steps">
-                    <li>1. 디자인 비평과 분석</li>
-                    <li>2. 디자인 역사와 철학</li>
-                    <li>3. AI를 활용한 크리에이티브</li>
-                </ul>
+                <a href="pages/trends.html" class="btn-link">Learn More →</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Design Theory Hub. All rights reserved.</p>
+            <p>&copy; 2025 Design Theory Hub. Made by Panda Universe.</p>
         </div>
     </footer>
 
