@@ -1,138 +1,60 @@
-// ========================================
-// Main JavaScript - Navigation & Interactions
-// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. 모바일 메뉴 토글 (Mobile Menu Toggle)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const navMenu = document.getElementById('navMenu');
-    
-    if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            mobileMenuToggle.classList.toggle('active');
         });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            if (!mobileMenuToggle.contains(event.target) && !navMenu.contains(event.target)) {
-                navMenu.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
+    }
+
+    // 2. 모바일에서 드롭다운 클릭 시 펼치기 (Mobile Dropdown)
+    const dropdowns = document.querySelectorAll('.dropdown > .nav-link');
+    
+    dropdowns.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault(); // 링크 이동 방지
+                // 다른 드롭다운 닫기 (선택사항)
+                // this.parentElement.classList.toggle('active'); // CSS에서 .active 스타일링 필요 시
+                const submenu = this.nextElementSibling;
+                if (submenu.style.display === 'block') {
+                    submenu.style.display = 'none';
+                } else {
+                    submenu.style.display = 'block';
+                }
             }
         });
-        
-        // Close mobile menu when clicking a link
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                mobileMenuToggle.classList.remove('active');
+    });
+
+    // 3. Library 페이지 필터링 시스템 (Filtering System)
+    const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+    const contentCards = document.querySelectorAll('.content-card'); // Library 페이지의 카드 클래스명
+
+    if (filterCheckboxes.length > 0) {
+        filterCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // 체크된 필터들의 value를 배열로 수집
+                const activeFilters = Array.from(filterCheckboxes)
+                    .filter(cb => cb.checked)
+                    .map(cb => cb.value);
+                
+                contentCards.forEach(card => {
+                    const cardCategory = card.dataset.category; // HTML에 data-category="foundations" 형식 필요
+                    
+                    // 필터가 없거나(전체보기), 해당 카테고리가 활성 필터에 포함되어 있으면 표시
+                    if (activeFilters.length === 0 || activeFilters.includes(cardCategory)) {
+                        card.style.display = 'block';
+                        // 애니메이션 효과 추가 가능 (fadeIn)
+                        card.style.opacity = '1';
+                    } else {
+                        card.style.display = 'none';
+                        card.style.opacity = '0';
+                    }
+                });
             });
         });
     }
-    
-    // Smooth Scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-    
-    // Add active class to current nav item
-    const currentLocation = location.pathname;
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentLocation || 
-            (currentLocation === '/' && link.getAttribute('href') === 'index.html')) {
-            link.classList.add('active');
-        }
-    });
-    
-    // Scroll animations for cards
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all cards
-    const cards = document.querySelectorAll('.category-card, .featured-card');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
-        observer.observe(card);
-    });
-    
-    // Back to top button (optional)
-    const createBackToTop = () => {
-        const button = document.createElement('button');
-        button.innerHTML = '↑';
-        button.className = 'back-to-top';
-        button.style.cssText = `
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--accent-primary);
-            color: white;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        `;
-        
-        document.body.appendChild(button);
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                button.style.opacity = '1';
-                button.style.transform = 'scale(1)';
-            } else {
-                button.style.opacity = '0';
-                button.style.transform = 'scale(0.8)';
-            }
-        });
-        
-        button.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        button.addEventListener('mouseenter', () => {
-            button.style.transform = 'scale(1.1)';
-        });
-        
-        button.addEventListener('mouseleave', () => {
-            button.style.transform = 'scale(1)';
-        });
-    };
-    
-    createBackToTop();
-    
-    console.log('Design Theory Hub loaded successfully! 🎨');
 });
