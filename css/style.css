@@ -1,318 +1,395 @@
-:root {
-    --bg-card: #ffffff;
-    --bg-secondary: #f3f4f6;
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --border-color: #e5e7eb;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --radius-md: 8px;
-    --radius-lg: 12px;
-    --radius-sm: 4px;
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --spacing-md: 1.5rem;
-}
-
-/* Category Brand Colors */
-.foundations { --category-color: #3b82f6; } /* Blue */
-.elements { --category-color: #ec4899; } /* Pink */
-.history { --category-color: #8b5cf6; } /* Purple */
-.ux-psychology { --category-color: #10b981; } /* Green */
-.practical { --category-color: #f59e0b; } /* Orange */
-.trends { --category-color: #ef4444; } /* Red */
-
-/* Base Styles */
-body {
-    font-family: 'Pretendard', sans-serif;
-    color: var(--text-primary);
-    margin: 0;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navbar & Dropdown */
-.navbar {
-    background: #fff;
-    box-shadow: 0 2px 10px var(--shadow);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--text-primary);
-}
-
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: var(--text-primary);
-    font-weight: 500;
-    padding: 0.5rem;
-}
-
-/* New Dropdown Styles */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    box-shadow: 0 10px 30px var(--shadow);
-    min-width: 200px; /* 너비 조정 */
-    z-index: 1000;
-    padding: 0.5rem 0;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    list-style: none;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-    transition: background var(--transition-fast);
-}
-
-.dropdown-menu a:hover {
-    background: var(--bg-secondary);
-    color: var(--category-color); /* 포인트 컬러 */
-}
-
-/* Hero Section & Stats */
-.hero {
-    background: #111827;
-    color: white;
-    padding: 5rem 0;
-    text-align: center;
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: 700;
-    color: white;
-    line-height: 1;
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    color: white;
-    margin-top: 0.5rem;
-}
-
-/* Category Grid (Large Cards) */
-.section { padding: 4rem 0; }
-
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
-}
-
-.category-grid-6 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--spacing-md);
-}
-
-.category-card-large {
-    background: var(--bg-card);
-    border: 2px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    transition: all var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.category-card-large::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    background: var(--category-color);
-}
-
-.category-card-large:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px var(--shadow);
-    border-color: var(--category-color);
-}
-
-.card-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.card-title-en {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--category-color);
-    margin: 0;
-}
-
-.card-title-kr {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    margin: 0.25rem 0 1.5rem 0;
-}
-
-.card-topics {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-}
-
-.card-topics li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-    color: var(--text-primary);
-}
-
-.card-topics li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--category-color);
-    font-weight: bold;
-}
-
-.btn-link {
-    display: inline-block;
-    margin-top: 1.5rem;
-    text-decoration: none;
-    color: var(--category-color);
-    font-weight: 600;
-}
-
-/* Path Cards */
-.path-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
-}
-
-.path-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-}
-
-.path-level {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-sm);
-    font-weight: 600;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-}
-
-.path-level.beginner { background: #dbeafe; color: #1e40af; }
-.path-level.intermediate { background: #fef3c7; color: #92400e; }
-.path-level.advanced { background: #fce7f3; color: #9f1239; }
-
-.path-steps {
-    margin: 1rem 0;
-    padding-left: 0;
-    list-style: none;
-}
-
-.path-steps li {
-    margin-bottom: 0.75rem;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-}
-
-/* Responsive (Mobile) */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* JS로 토글 */
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 1rem 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        gap: 0;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Theory Hub</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     
-    .nav-menu li {
-        width: 100%;
-    }
+    <style>
+        /* --- 여기에 CSS를 직접 넣었습니다 --- */
+        :root {
+            --bg-card: #ffffff;
+            --bg-secondary: #f3f4f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-sm: 4px;
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --spacing-md: 1.5rem;
+        }
 
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        border: none;
-        padding-left: 1rem;
-        background: #fafafa;
-    }
-    
-    .category-grid-6 {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-stats {
-        gap: 1.5rem;
-    }
-}
+        /* Category Brand Colors */
+        .foundations { --category-color: #3b82f6; }
+        .elements { --category-color: #ec4899; }
+        .history { --category-color: #8b5cf6; }
+        .ux-psychology { --category-color: #10b981; }
+        .practical { --category-color: #f59e0b; }
+        .trends { --category-color: #ef4444; }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            color: var(--text-primary);
+            margin: 0;
+            line-height: 1.6;
+            background-color: #f9fafb;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; margin: 0; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem;
+            color: #4b5563;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover { color: #111827; }
+
+        /* Dropdown Styles */
+        .dropdown { position: relative; }
+        
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            min-width: 220px;
+            padding: 0.5rem;
+            z-index: 1000;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #111827;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Hero Background Effect */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, #3b82f633 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .hero .container { position: relative; z-index: 1; }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #9ca3af;
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 3rem;
+        }
+
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: white; }
+        .stat-label { font-size: 0.9rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* Category Grid */
+        .section { padding: 5rem 0; }
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #111827;
+        }
+
+        .category-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card-large {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .category-card-large::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--category-color);
+        }
+
+        .category-card-large:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--category-color);
+        }
+
+        .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .card-title-en { font-size: 1.5rem; font-weight: 800; color: var(--category-color); margin: 0; }
+        .card-title-kr { font-size: 1.125rem; color: var(--text-secondary); margin: 0.25rem 0 1.5rem 0; font-weight: 500; }
+
+        .card-topics li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+        
+        .card-topics li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--category-color);
+            font-weight: bold;
+        }
+
+        .btn-link {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--category-color);
+            font-size: 0.95rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu { display: none; } /* JS 필요하지만 일단 숨김 */
+            .hero h1 { font-size: 2rem; }
+            .hero-stats { flex-direction: column; gap: 2rem; }
+            .category-grid-6 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Design Theory Hub</a>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Theory ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/foundations.html">📐 Foundations (핵심 원리)</a></li>
+                        <li><a href="pages/elements.html">🎨 Elements (디자인 요소)</a></li>
+                        <li><a href="pages/history.html">📜 History (역사/사조)</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Practice ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/ux-psychology.html">🧠 UX/Psychology (심리)</a></li>
+                        <li><a href="pages/practical.html">💼 Practical (실무/크리틱)</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Trends ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/trends.html">🚀 Trends (트렌드)</a></li>
+                        <li><a href="#">🤖 AI Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/library.html" class="nav-link">Library</a></li>
+                <li><a href="pages/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Design Theory for Everyone</h1>
+            <p>디자인의 기본 원리부터 최신 AI 트렌드까지, 이론과 실무를 연결합니다.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Core Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Theory Articles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free Access</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section container">
+        <h2 class="section-title">Explore Categories</h2>
+        <div class="category-grid-6">
+            <div class="category-card-large foundations">
+                <div class="card-icon">📐</div>
+                <h3 class="card-title-en">Foundations</h3>
+                <h4 class="card-title-kr">핵심 원리</h4>
+                <ul class="card-topics">
+                    <li>게슈탈트 이론</li>
+                    <li>그리드 시스템</li>
+                    <li>비례와 균형 (황금비)</li>
+                </ul>
+                <a href="pages/foundations.html" class="btn-link">View More →</a>
+            </div>
+
+            <div class="category-card-large elements">
+                <div class="card-icon">🎨</div>
+                <h3 class="card-title-en">Elements</h3>
+                <h4 class="card-title-kr">디자인 요소</h4>
+                <ul class="card-topics">
+                    <li>색채학 (Color Theory)</li>
+                    <li>타이포그래피</li>
+                    <li>형태 심리학</li>
+                </ul>
+                <a href="pages/elements.html" class="btn-link">View More →</a>
+            </div>
+
+            <div class="category-card-large history">
+                <div class="card-icon">📜</div>
+                <h3 class="card-title-en">History</h3>
+                <h4 class="card-title-kr">역사/사조</h4>
+                <ul class="card-topics">
+                    <li>디자인 역사 흐름</li>
+                    <li>바우하우스</li>
+                    <li>모더니즘 vs 포스트모더니즘</li>
+                </ul>
+                <a href="pages/history.html" class="btn-link">View More →</a>
+            </div>
+
+            <div class="category-card-large ux-psychology">
+                <div class="card-icon">🧠</div>
+                <h3 class="card-title-en">UX/Psychology</h3>
+                <h4 class="card-title-kr">사용자 심리</h4>
+                <ul class="card-topics">
+                    <li>UX 법칙 (Hick's, Fitts's)</li>
+                    <li>넛지 디자인</li>
+                    <li>인지 부하 이론</li>
+                </ul>
+                <a href="pages/ux-psychology.html" class="btn-link">View More →</a>
+            </div>
+
+            <div class="category-card-large practical">
+                <div class="card-icon">💼</div>
+                <h3 class="card-title-en">Practical</h3>
+                <h4 class="card-title-kr">실무/크리틱</h4>
+                <ul class="card-topics">
+                    <li>구도 분석</li>
+                    <li>디자인 크리틱 방법론</li>
+                    <li>Case Study</li>
+                </ul>
+                <a href="pages/practical.html" class="btn-link">View More →</a>
+            </div>
+
+            <div class="category-card-large trends">
+                <div class="card-icon">🚀</div>
+                <h3 class="card-title-en">Trends</h3>
+                <h4 class="card-title-kr">트렌드/미래</h4>
+                <ul class="card-topics">
+                    <li>AI 디자인 & 프롬프트</li>
+                    <li>최신 트렌드 리포트</li>
+                    <li>Spatial Design (VR/AR)</li>
+                </ul>
+                <a href="pages/trends.html" class="btn-link">View More →</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
