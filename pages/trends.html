@@ -2,48 +2,73 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trends - Design Theory Hub</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
-        .page-header {
-            background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
-            color: white; padding: 6rem 0; text-align: center; border-radius: 0 0 24px 24px; margin-bottom: 4rem;
-        }
-        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 800; }
-        .content-section { background: white; border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; }
-        .content-section h2 { color: #ef4444; margin-bottom: 1.5rem; font-size: 1.75rem; font-weight: 700; }
+        /* Red Theme */
+        .page-header { background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%); color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem; }
+        .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+        .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .article-title { color: #991b1b; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .director-note { background: #fef2f2; border-left: 4px solid #ef4444; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
+        .note-title { font-weight: 700; color: #991b1b; margin-bottom: 0.5rem; display: block; }
+        .tag-theory { background: #fee2e2; color: #991b1b; }
+        .tag-practice { background: #dcfce7; color: #15803d; }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <a href="../index.html" class="logo">Design Theory Hub</a>
-             <ul class="nav-menu">
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="foundations.html" class="nav-link">Foundations</a></li>
+                <li><a href="trends.html" class="nav-link" style="color:#ef4444; font-weight:bold;">Trends</a></li>
                 <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="page-header">
+    <header class="page-header">
         <div class="container">
             <h1>🚀 Trends & Future</h1>
-            <p>AI, 3D, 공간 컴퓨팅 등 다가오는 디자인의 미래를 준비합니다.</p>
+            <p>디자인의 경계가 확장되고 있습니다.<br>Generative AI와 공간 컴퓨팅(Spatial Computing)이 바꿀 미래.</p>
         </div>
-    </div>
+    </header>
 
     <main class="container">
-        <div class="content-section">
-            <h2>1. 생성형 AI 디자인 (Generative AI)</h2>
-            <p>미드저니, 스테이블 디퓨전 등을 활용한 디자인 프로세스의 변화를 다룹니다.</p>
-        </div>
-        <div class="content-section">
-            <h2>2. 공간 디자인 (Spatial Design)</h2>
-            <p>Vision Pro 등 AR/VR 기기를 위한 공간 인터페이스 디자인입니다.</p>
-        </div>
+        <article class="article-card">
+            <span class="tag tag-theory">Generative AI</span>
+            <span class="tag tag-practice">Workflow</span>
+            <h2 class="article-title">1. AI와 디자인 워크플로우 혁신</h2>
+            <p class="article-desc">
+                AI는 디자이너를 대체하는 것이 아니라, '손이 빠른 조수'가 되어줄 것입니다. 
+                <strong>Midjourney</strong>로 무드보드를 10분 만에 만들고, <strong>Photoshop AI Fill</strong>로 리터칭 시간을 단축하세요.
+                이제 디자이너의 역량은 '제작(Craft)'에서 '디렉팅(Directing)'으로 이동하고 있습니다.
+            </p>
+        </article>
+
+        <article class="article-card">
+            <span class="tag tag-theory">Spatial Design</span>
+            <span class="tag tag-practice">Vision Pro</span>
+            <h2 class="article-title">2. 공간 컴퓨팅 UI (Spatial UI)</h2>
+            <p class="article-desc">
+                Apple Vision Pro의 등장으로 UI는 2차원 화면을 벗어났습니다.
+                이제 '깊이감(Depth)', '재질감(Glassmorphism)', 그리고 '시선 추적(Eye Tracking)'을 고려한 3차원 인터페이스 설계가 필요합니다.
+            </p>
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: 벤토 그리드(Bento Grid)</span>
+                <p style="color:#7f1d1d;">
+                    최근 웹 트렌드인 '벤토 그리드(도시락통 레이아웃)'는 단순한 유행이 아닙니다.
+                    반응형 환경에 유연하게 대응하면서도, 다양한 미디어(영상, 3D, 텍스트)를 모듈형으로 보여주기에 가장 적합한 구조이기 때문에 각광받는 것입니다.
+                </p>
+            </div>
+        </article>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html>
