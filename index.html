@@ -3,216 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="3D 아티스트와 디자이너를 위한 디자인 이론 가이드 - 색상, 조명, 구도, AI 프롬프트">
-    <meta name="keywords" content="디자인 이론, 3D 아트, 조명, 색상 이론, AI 프롬프트, Cinema 4D, Unreal Engine">
-    <meta name="author" content="Panda Universe">
-    <title>Design Theory Hub - 디자인 이론 가이드</title>
+    <title>Design Theory Hub</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-</head>
+    </head>
 <body>
-    <!-- 네비게이션 -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>🎨 Design Theory Hub</h1>
-            </div>
-            <button class="theme-toggle" id="themeToggle" aria-label="테마 변경">
-                <span class="icon">🌙</span>
-            </button>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="메뉴">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="active">홈</a></li>
-                <li><a href="pages/color-theory.html">색상 이론</a></li>
-                <li><a href="pages/lighting.html">조명 이론</a></li>
-                <li><a href="pages/composition.html">구도</a></li>
-                <li><a href="pages/typography.html">타이포그래피</a></li>
-                <li><a href="pages/ai-prompts.html">AI 프롬프트</a></li>
-                <li><a href="pages/about.html">About</a></li>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Design Theory Hub</a>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Theory ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/foundations.html">📐 Foundations (핵심 원리)</a></li>
+                        <li><a href="pages/elements.html">🎨 Elements (디자인 요소)</a></li>
+                        <li><a href="pages/history.html">📜 History (역사/사조)</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Practice ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/ux-psychology.html">🧠 UX/Psychology (심리)</a></li>
+                        <li><a href="pages/practical.html">💼 Practical (실무/크리틱)</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Trends ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/trends.html">🚀 Trends (트렌드)</a></li>
+                        <li><a href="#">🤖 AI Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="pages/library.html" class="nav-link">Library</a></li>
+                <li><a href="pages/about.html" class="nav-link">About</a></li>
             </ul>
-        </div>
+            <div class="menu-toggle">☰</div> </div>
     </nav>
 
-    <!-- 히어로 섹션 -->
-    <section class="hero">
+    <header class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">3D 아티스트를 위한<br>디자인 이론 완전 가이드</h1>
-                <p class="hero-subtitle">실무에서 바로 쓸 수 있는 색상, 조명, 구도부터 AI 프롬프트까지</p>
-                <div class="hero-cta">
-                    <a href="#categories" class="btn btn-primary">시작하기</a>
-                    <a href="pages/about.html" class="btn btn-secondary">About</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 카테고리 그리드 -->
-    <section id="categories" class="categories">
-        <div class="container">
-            <h2 class="section-title">디자인 이론 카테고리</h2>
+            <h1>Design Theory for Everyone</h1>
+            <p>디자인의 기본 원리부터 최신 AI 트렌드까지, 이론과 실무를 연결합니다.</p>
             
-            <div class="category-grid">
-                <!-- 색상 이론 -->
-                <a href="pages/color-theory.html" class="category-card">
-                    <div class="card-icon">🎨</div>
-                    <h3>색상 이론</h3>
-                    <p>색상환, 색온도, 색상 조화, PBR 워크플로우에서의 색상</p>
-                    <span class="card-arrow">→</span>
-                </a>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Core Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Theory Articles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free Access</div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-                <!-- 조명 이론 -->
-                <a href="pages/lighting.html" class="category-card">
-                    <div class="card-icon">💡</div>
-                    <h3>조명 이론</h3>
-                    <p>3-Point Lighting, 색온도, 자연광/인공광, 시네마틱 조명</p>
-                    <span class="card-arrow">→</span>
-                </a>
+    <section class="section container">
+        <h2 class="section-title">Explore Categories</h2>
+        <div class="category-grid-6">
+            <div class="category-card-large foundations">
+                <div class="card-icon">📐</div>
+                <h3 class="card-title-en">Foundations</h3>
+                <h4 class="card-title-kr">핵심 원리</h4>
+                <ul class="card-topics">
+                    <li>게슈탈트 이론</li>
+                    <li>그리드 시스템</li>
+                    <li>비례와 균형 (황금비)</li>
+                </ul>
+                <a href="pages/foundations.html" class="btn-link">View More →</a>
+            </div>
 
-                <!-- 구도와 레이아웃 -->
-                <a href="pages/composition.html" class="category-card">
-                    <div class="card-icon">📐</div>
-                    <h3>구도와 레이아웃</h3>
-                    <p>삼분할 법칙, 황금비율, 시각적 흐름, 3D 카메라 구도</p>
-                    <span class="card-arrow">→</span>
-                </a>
+            <div class="category-card-large elements">
+                <div class="card-icon">🎨</div>
+                <h3 class="card-title-en">Elements</h3>
+                <h4 class="card-title-kr">디자인 요소</h4>
+                <ul class="card-topics">
+                    <li>색채학 (Color Theory)</li>
+                    <li>타이포그래피</li>
+                    <li>형태 심리학</li>
+                </ul>
+                <a href="pages/elements.html" class="btn-link">View More →</a>
+            </div>
 
-                <!-- 타이포그래피 -->
-                <a href="pages/typography.html" class="category-card">
-                    <div class="card-icon">✍️</div>
-                    <h3>타이포그래피</h3>
-                    <p>폰트 선택, 계층 구조, 3D 텍스트, 모션 타이포그래피</p>
-                    <span class="card-arrow">→</span>
-                </a>
+            <div class="category-card-large history">
+                <div class="card-icon">📜</div>
+                <h3 class="card-title-en">History</h3>
+                <h4 class="card-title-kr">역사/사조</h4>
+                <ul class="card-topics">
+                    <li>디자인 역사 흐름</li>
+                    <li>바우하우스</li>
+                    <li>모더니즘 vs 포스트모더니즘</li>
+                </ul>
+                <a href="pages/history.html" class="btn-link">View More →</a>
+            </div>
 
-                <!-- 형태와 형상 -->
-                <a href="pages/form-shape.html" class="category-card">
-                    <div class="card-icon">🎭</div>
-                    <h3>형태와 형상</h3>
-                    <p>기본 형태 이론, 실루엣, Topology, Edge Flow</p>
-                    <span class="card-arrow">→</span>
-                </a>
+            <div class="category-card-large ux-psychology">
+                <div class="card-icon">🧠</div>
+                <h3 class="card-title-en">UX/Psychology</h3>
+                <h4 class="card-title-kr">사용자 심리</h4>
+                <ul class="card-topics">
+                    <li>UX 법칙 (Hick's, Fitts's)</li>
+                    <li>넛지 디자인</li>
+                    <li>인지 부하 이론</li>
+                </ul>
+                <a href="pages/ux-psychology.html" class="btn-link">View More →</a>
+            </div>
 
-                <!-- 모션과 타이밍 -->
-                <a href="pages/motion-timing.html" class="category-card">
-                    <div class="card-icon">🎬</div>
-                    <h3>모션과 타이밍</h3>
-                    <p>애니메이션 12원칙, Easing, 모션 그래픽, 카메라 무브먼트</p>
-                    <span class="card-arrow">→</span>
-                </a>
+            <div class="category-card-large practical">
+                <div class="card-icon">💼</div>
+                <h3 class="card-title-en">Practical</h3>
+                <h4 class="card-title-kr">실무/크리틱</h4>
+                <ul class="card-topics">
+                    <li>구도 분석</li>
+                    <li>디자인 크리틱 방법론</li>
+                    <li>Case Study</li>
+                </ul>
+                <a href="pages/practical.html" class="btn-link">View More →</a>
+            </div>
 
-                <!-- 머티리얼과 텍스처 -->
-                <a href="pages/material-texture.html" class="category-card">
-                    <div class="card-icon">🌟</div>
-                    <h3>머티리얼과 텍스처</h3>
-                    <p>PBR 워크플로우, 재질 특성, 프로시저럴 텍스처</p>
-                    <span class="card-arrow">→</span>
-                </a>
-
-                <!-- AI 프롬프트 -->
-                <a href="pages/ai-prompts.html" class="category-card featured">
-                    <div class="card-icon">🤖</div>
-                    <h3>AI 프롬프트 엔지니어링</h3>
-                    <p>이미지/비디오 생성 프롬프트, 효과적인 키워드, 실전 예제</p>
-                    <span class="card-arrow">→</span>
-                </a>
-
-                <!-- 실전 워크플로우 -->
-                <a href="pages/workflow.html" class="category-card">
-                    <div class="card-icon">🎯</div>
-                    <h3>실전 워크플로우</h3>
-                    <p>프로젝트 파이프라인, C4D/UE5, AI 도구 통합</p>
-                    <span class="card-arrow">→</span>
-                </a>
+            <div class="category-card-large trends">
+                <div class="card-icon">🚀</div>
+                <h3 class="card-title-en">Trends</h3>
+                <h4 class="card-title-kr">트렌드/미래</h4>
+                <ul class="card-topics">
+                    <li>AI 디자인 & 프롬프트</li>
+                    <li>최신 트렌드 리포트</li>
+                    <li>Spatial Design (VR/AR)</li>
+                </ul>
+                <a href="pages/trends.html" class="btn-link">View More →</a>
             </div>
         </div>
     </section>
 
-    <!-- Featured 섹션 -->
-    <section class="featured">
-        <div class="container">
-            <h2 class="section-title">추천 콘텐츠</h2>
-            
-            <div class="featured-grid">
-                <div class="featured-card">
-                    <div class="featured-tag">🔥 인기</div>
-                    <h3>3-Point Lighting 완전 정복</h3>
-                    <p>Key Light, Fill Light, Rim Light의 모든 것</p>
-                    <a href="pages/lighting.html#three-point" class="read-more">자세히 보기 →</a>
-                </div>
-
-                <div class="featured-card">
-                    <div class="featured-tag">⚡ NEW</div>
-                    <h3>AI 시대의 디자인 워크플로우</h3>
-                    <p>3D + AI 하이브리드 작업 방식</p>
-                    <a href="pages/workflow.html#ai-hybrid" class="read-more">자세히 보기 →</a>
-                </div>
-
-                <div class="featured-card">
-                    <div class="featured-tag">💎 필수</div>
-                    <h3>색온도로 시간대 표현하기</h3>
-                    <p>Kelvin 스케일과 실무 적용법</p>
-                    <a href="pages/color-theory.html#temperature" class="read-more">자세히 보기 →</a>
-                </div>
+    <section class="section container bg-light">
+        <h2 class="section-title">Learning Paths</h2>
+        <div class="path-grid">
+            <div class="path-card">
+                <span class="path-level beginner">Beginner</span>
+                <h3>디자인 입문자 코스</h3>
+                <ul class="path-steps">
+                    <li>1. 디자인의 5가지 핵심 원리</li>
+                    <li>2. 색채학 기초 마스터</li>
+                    <li>3. 타이포그래피의 이해</li>
+                </ul>
+            </div>
+            <div class="path-card">
+                <span class="path-level intermediate">Intermediate</span>
+                <h3>UX/UI 심화 코스</h3>
+                <ul class="path-steps">
+                    <li>1. 게슈탈트 심리학 심화</li>
+                    <li>2. UX 심리학 법칙 10선</li>
+                    <li>3. 디자인 시스템 구축</li>
+                </ul>
+            </div>
+            <div class="path-card">
+                <span class="path-level advanced">Advanced</span>
+                <h3>크리에이티브 디렉터 코스</h3>
+                <ul class="path-steps">
+                    <li>1. 디자인 비평과 분석</li>
+                    <li>2. 디자인 역사와 철학</li>
+                    <li>3. AI를 활용한 크리에이티브</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- CTA 섹션 -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>더 많은 콘텐츠가 궁금하신가요?</h2>
-                <p>YouTube 채널과 Behance 포트폴리오에서 더 많은 예제를 만나보세요</p>
-                <div class="cta-buttons">
-                    <a href="https://www.youtube.com/@PandaUniverse" target="_blank" class="btn btn-youtube">
-                        📺 YouTube 채널
-                    </a>
-                    <a href="https://www.behance.net/pandauniverse" target="_blank" class="btn btn-behance">
-                        🎨 Behance 포트폴리오
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 푸터 -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3>Design Theory Hub</h3>
-                    <p>3D 아티스트를 위한 디자인 이론 가이드</p>
-                </div>
-                <div class="footer-links">
-                    <h4>바로가기</h4>
-                    <ul>
-                        <li><a href="pages/color-theory.html">색상 이론</a></li>
-                        <li><a href="pages/lighting.html">조명 이론</a></li>
-                        <li><a href="pages/ai-prompts.html">AI 프롬프트</a></li>
-                        <li><a href="pages/about.html">About</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow</h4>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/@PandaUniverse" target="_blank" aria-label="YouTube">📺</a>
-                        <a href="https://www.behance.net/pandauniverse" target="_blank" aria-label="Behance">🎨</a>
-                        <a href="https://github.com" target="_blank" aria-label="GitHub">💻</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Panda Universe. All rights reserved.</p>
-            </div>
+            <p>&copy; 2025 Design Theory Hub. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/theme-toggle.js"></script>
 </body>
 </html>
