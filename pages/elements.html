@@ -8,57 +8,88 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
-        /* 헤더: 핑크 그라데이션 */
+        /* Pink Theme */
         .page-header {
-            background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
-            color: white;
-            padding: 6rem 0;
-            text-align: center;
-            border-radius: 0 0 24px 24px;
-            margin-bottom: 4rem;
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem;
         }
-        .page-header h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 800; }
-        .page-header p { font-size: 1.25rem; opacity: 0.9; }
+        .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+
+        .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .article-title { color: #be185d; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .article-desc { font-size: 1.1rem; color: #4b5563; margin-bottom: 2rem; line-height: 1.7; }
         
-        .content-section {
-            background: white; border-radius: 16px; padding: 2.5rem; margin-bottom: 2rem;
-            border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-        .content-section h2 { color: #ec4899; margin-bottom: 1.5rem; font-size: 1.75rem; font-weight: 700; }
+        .director-note { background: #fdf2f8; border-left: 4px solid #ec4899; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
+        .note-title { font-weight: 700; color: #be185d; margin-bottom: 0.5rem; display: block; }
+        .note-content { font-size: 0.95rem; color: #831843; }
+
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
+        .tag-theory { background: #fce7f3; color: #9d174d; }
+        .tag-practice { background: #dcfce7; color: #15803d; }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="container nav-container">
             <a href="../index.html" class="logo">Design Theory Hub</a>
+            <div class="menu-toggle">☰</div>
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="elements.html" class="nav-link">Elements</a></li>
+                <li><a href="foundations.html" class="nav-link">Foundations</a></li>
+                <li><a href="elements.html" class="nav-link" style="color:#ec4899; font-weight:bold;">Elements</a></li>
                 <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="page-header">
+    <header class="page-header">
         <div class="container">
             <h1>🎨 Elements</h1>
-            <p>색상, 타이포그래피, 형태 등 디자인을 구성하는 핵심 재료입니다.</p>
+            <p>디자인을 구성하는 원소(Elements).<br>색채학의 물리적 특성부터 타이포그래피의 기술적 최적화까지 다룹니다.</p>
         </div>
-    </div>
+    </header>
 
     <main class="container">
-        <div class="content-section">
-            <h2>1. 색채학 (Color Theory)</h2>
-            <p>색의 조화와 심리적 효과를 다룹니다. 먼셀의 색상환, 보색 대비, 유사색 조화 등이 포함됩니다.</p>
-        </div>
-        <div class="content-section">
-            <h2>2. 타이포그래피 (Typography)</h2>
-            <p>글자를 다루는 기술입니다. 세리프와 산세리프의 차이, 자간(Kerning), 행간(Leading)의 중요성을 배웁니다.</p>
-        </div>
-        <div class="content-section">
-            <h2>3. 형태 심리학 (Shape Psychology)</h2>
-            <p>원(부드러움), 사각형(신뢰), 삼각형(역동성) 등 기본 도형이 주는 심리적 느낌을 이해합니다.</p>
-        </div>
+        <article class="article-card">
+            <span class="tag tag-theory">Color Science</span>
+            <span class="tag tag-practice">Accessibility</span>
+            <h2 class="article-title">1. 디지털 색채학 심화 (Advanced Color)</h2>
+            <p class="article-desc">
+                단순히 '보기 좋은 색'을 넘어, 디바이스의 색공간(Color Space)과 사용자의 인지 능력을 고려한 배색이 필요합니다.
+                sRGB와 Display P3의 차이를 이해하고, 색각 이상자를 위한 유니버설 디자인을 적용해야 합니다.
+            </p>
+            <ul style="list-style: disc; padding-left: 1.5rem; color: #4b5563; margin-bottom: 1.5rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>WCAG 명도 대비:</strong> 텍스트 가독성을 위해 배경과 글자 사이의 명도비는 최소 4.5:1(AA 등급)을 유지해야 합니다.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>60-30-10 법칙:</strong> 주조색(60%), 보조색(30%), 강조색(10%)의 황금 비율은 인테리어뿐 아니라 UI 디자인에서도 유효합니다.</li>
+            </ul>
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: HSB vs Hex Code</span>
+                <p class="note-content">
+                    배색을 잡을 때는 Hex Code(#FF0000) 대신 <strong>HSB(Hue, Saturation, Brightness)</strong> 모드를 사용하세요.
+                    색상(H)은 고정한 채 채도(S)와 명도(B)만 조절하면, 실패 없는 톤온톤(Tone on Tone) 팔레트를 5초 만에 만들 수 있습니다.
+                </p>
+            </div>
+        </article>
+
+        <article class="article-card">
+            <span class="tag tag-theory">Type Anatomy</span>
+            <span class="tag tag-practice">Performance</span>
+            <h2 class="article-title">2. 실전 타이포그래피 (Typography)</h2>
+            <p class="article-desc">
+                타이포그래피는 '읽히기 위해' 존재합니다. x-height(소문자 높이)가 높은 폰트는 가독성이 좋고, 
+                자간(Letter Spacing)과 행간(Line Height)은 글의 호흡을 결정합니다.
+            </p>
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: 시스템 폰트 vs 웹 폰트</span>
+                <p class="note-content">
+                    무조건 예쁜 폰트를 쓴다고 좋은 게 아닙니다. 
+                    <br>• <strong>시스템 폰트(San Francisco, Segoe UI):</strong> 로딩 시간 '0초'. 대시보드나 유틸리티 앱에 적합.
+                    <br>• <strong>웹 폰트(Pretendard):</strong> 브랜딩에 좋지만, FOIT(깜빡임) 방지를 위해 WOFF2 포맷과 subset 사용이 필수입니다.
+                </p>
+            </div>
+        </article>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html>
