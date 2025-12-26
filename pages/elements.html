@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Elements & Lighting - Design Theory Hub</title>
+    <title>Elements - Design Theory Hub</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -11,18 +11,7 @@
         .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
         .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .article-title { color: #be185d; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .director-note { background: #fdf2f8; border-left: 4px solid #ec4899; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-        .note-title { font-weight: 700; color: #be185d; margin-bottom: 0.5rem; display: block; }
-        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
-        .tag-theory { background: #fce7f3; color: #9d174d; }
-        .tag-practice { background: #dcfce7; color: #15803d; }
-        
-        /* 세부 섹션 스타일 */
-        .sub-section { margin-top: 2.5rem; border-top: 1px dashed #e5e7eb; padding-top: 2rem; }
-        .sub-title { font-size: 1.4rem; font-weight: 700; color: #111827; margin-bottom: 1rem; }
-        .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .concept-card { background: #f9fafb; padding: 1.5rem; border-radius: 12px; }
-        .concept-head { font-weight: 700; color: #374151; margin-bottom: 0.5rem; display: block; font-size: 1.1rem; }
+        .tag { background: #fce7f3; color: #be185d; padding: 4px 12px; border-radius: 20px; font-weight: 600; margin-bottom: 1rem; display: inline-block; }
     </style>
 </head>
 <body>
@@ -33,95 +22,51 @@
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="elements.html" class="nav-link" style="color:#ec4899; font-weight:bold;">Elements</a></li>
-                <li><a href="practical.html" class="nav-link">Practical</a></li>
+                <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="page-header">
         <div class="container">
-            <h1>🎨 Elements & Lighting</h1>
-            <p>디자인의 재료가 되는 색상과 형태, <br>그리고 3D의 생명인 '빛(Lighting)'을 심도 있게 다룹니다.</p>
+            <h1>🎨 Elements</h1>
+            <p>디자인을 구성하는 3가지 핵심 재료입니다.</p>
         </div>
     </header>
 
     <main class="container">
         <article class="article-card">
-            <span class="tag tag-theory">Lighting Theory</span>
-            <span class="tag tag-practice">Rendering</span>
-            <h2 class="article-title">1. 조명과 렌더링 (Lighting & Rendering)</h2>
-            <p class="article-desc">
-                빛은 공간감과 감정을 만듭니다. 3D 아티스트에게 조명은 곧 '그림을 그리는 붓'입니다.
-                물리적 빛의 성질을 이해해야 사실적인 렌더링(Photorealism)이 가능합니다.
+            <span class="tag">Topic 01</span>
+            <h2 class="article-title">1. 색채학 (Color Theory)</h2>
+            <p><strong>약속된 내용:</strong> 색상환, 배색 조화, 색의 심리, 60-30-10 법칙.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                색상은 사용자의 감정을 유도합니다. 
+                먼셀의 색상환을 기반으로 한 보색(대비)과 유사색(조화) 전략을 이해해야 합니다. 
+                실무에서는 '60(주조색)-30(보조색)-10(강조색)' 비율 법칙이 가장 많이 쓰입니다.
             </p>
-
-            <div class="concept-grid">
-                <div class="concept-card">
-                    <span class="concept-head">💡 3점 조명 (Three-Point Lighting)</span>
-                    <p>가장 기본이 되는 조명 세팅법입니다.</p>
-                    <ul style="margin-top:0.5rem; font-size:0.95rem; color:#4b5563;">
-                        <li><strong>Key Light:</strong> 주광. 피사체의 형태와 입체감을 결정.</li>
-                        <li><strong>Fill Light:</strong> 보조광. 그림자를 부드럽게 완화.</li>
-                        <li><strong>Back Light:</strong> 역광(Rim Light). 배경과 피사체를 분리.</li>
-                    </ul>
-                </div>
-                <div class="concept-card">
-                    <span class="concept-head">🌓 빛의 성질 (Quality of Light)</span>
-                    <ul style="margin-top:0.5rem; font-size:0.95rem; color:#4b5563;">
-                        <li><strong>Hard Light:</strong> 강한 대비, 선명한 그림자. (정오의 태양)</li>
-                        <li><strong>Soft Light:</strong> 부드러운 그림자, 확산광. (구름 낀 날, 소프트박스)</li>
-                        <li><strong>Falloff:</strong> 광원으로부터 거리가 멀어질수록 빛이 약해지는 감쇠 현상 (Inverse Square Law).</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="sub-section">
-                <h3 class="sub-title">Advanced: 렌더링 테크닉</h3>
-                <div class="concept-grid">
-                    <div class="concept-card">
-                        <span class="concept-head">HDRI (High Dynamic Range Imaging)</span>
-                        <p>실제 환경의 빛 정보를 담은 360도 이미지를 광원으로 사용하여, 반사(Reflection)와 조명을 동시에 해결하는 기법입니다.</p>
-                    </div>
-                    <div class="concept-card">
-                        <span class="concept-head">GI (Global Illumination)</span>
-                        <p>빛이 물체에 닿은 후 반사되어 다른 물체에 영향을 주는 '간접광(Indirect Light)'까지 계산하는 방식입니다. 사실감의 핵심입니다.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="director-note">
-                <span class="note-title">💡 Director's Note: 조명의 내러티브</span>
-                <p class="note-content">
-                    기술적인 세팅보다 중요한 것은 '의도'입니다. 
-                    <br>- <strong>공포/긴장:</strong> 아래에서 위로 향하는 조명 (Uplighting)이나 강한 대비(Chiaroscuro).
-                    <br>- <strong>신비/희망:</strong> 볼류메트릭 라이트(Volumetric Light, God rays)를 활용한 빛줄기 연출.
-                    <br>렌더링을 걸기 전, "이 씬의 감정은 무엇인가?"를 먼저 정의하세요.
-                </p>
-            </div>
         </article>
 
         <article class="article-card">
-            <span class="tag tag-theory">Color Science</span>
-            <span class="tag tag-practice">ACES Workflow</span>
-            <h2 class="article-title">2. 디지털 색채학 (Advanced Color)</h2>
-            <p class="article-desc">
-                모니터 너머의 색을 다룹니다. 3D 작업자라면 반드시 알아야 할 색공간(Color Space)과 리니어 워크플로우를 포함합니다.
+            <span class="tag">Topic 02</span>
+            <h2 class="article-title">2. 타이포그래피 (Typography)</h2>
+            <p><strong>약속된 내용:</strong> 폰트 해부학, 자간/행간, 가독성, 폰트 페어링.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                타이포그래피는 읽히기 위해 존재합니다. 
+                본문용으로는 가독성이 높은 산세리프(San-serif)를, 제목용으로는 주목성이 높은 폰트를 선택합니다.
+                행간(Leading)은 글자 크기의 140~160%가 이상적입니다.
             </p>
-            
-            <div class="sub-section">
-                <h3 class="sub-title">ACES (Academy Color Encoding System)</h3>
-                <p style="margin-bottom: 1rem; color:#4b5563;">
-                    헐리우드 표준 색상 관리 시스템입니다. 기존 sRGB 워크플로우보다 훨씬 넓은 다이내믹 레인지(Dynamic Range)를 제공하여,
-                    조명이 강한 곳에서 색이 하얗게 타버리는 현상(Highlight Clipping)을 방지하고 필름 같은 룩을 만듭니다.
-                </p>
-                <div class="director-note">
-                    <span class="note-title">💡 Director's Note: 리니어 워크플로우</span>
-                    <p class="note-content">
-                        모든 텍스처(Albedo)는 sRGB로 제작되지만, 렌더 엔진은 수학적으로 빛을 계산하기 위해 'Linear' 공간을 사용합니다.
-                        따라서 텍스처를 임포트할 때 Gamma 2.2 보정이 올바르게 풀려있는지 반드시 확인해야 합니다. (특히 Normal, Roughness 맵은 Non-Color Data로 설정 필수)
-                    </p>
-                </div>
-            </div>
+        </article>
+
+        <article class="article-card">
+            <span class="tag">Topic 03</span>
+            <h2 class="article-title">3. 형태 심리학 (Shape Psychology)</h2>
+            <p><strong>약속된 내용:</strong> 원, 사각형, 삼각형의 의미와 활용.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                도형은 무의식적인 메시지를 전달합니다.<br>
+                - <strong>원(Circle):</strong> 부드러움, 화합, 여성성, 무한함.<br>
+                - <strong>사각형(Square):</strong> 신뢰, 안정, 질서, 남성성.<br>
+                - <strong>삼각형(Triangle):</strong> 역동성, 위험, 방향성, 에너지.
+            </p>
         </article>
     </main>
     <script src="../js/main.js"></script>
