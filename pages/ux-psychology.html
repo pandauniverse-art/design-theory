@@ -10,11 +10,11 @@
         /* Green Theme */
         .page-header { background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem; }
         .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
-        .page-header p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
         .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .article-title { color: #047857; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
         .director-note { background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
         .note-title { font-weight: 700; color: #047857; margin-bottom: 0.5rem; display: block; }
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
         .tag-theory { background: #d1fae5; color: #065f46; }
         .tag-practice { background: #dcfce7; color: #15803d; }
     </style>
@@ -51,7 +51,7 @@
             </p>
             <div class="director-note">
                 <span class="note-title">💡 Director's Note: 휠을 재발명하지 마라</span>
-                <p style="color:#064e3b;">
+                <p class="note-content">
                     검색창은 돋보기 아이콘, 장바구니는 우측 상단. 이 불문율을 깨는 순간 사용자는 이탈합니다.
                     창의성은 레이아웃 구조가 아니라, 콘텐츠와 마이크로 인터랙션에서 발휘하세요.
                 </p>
@@ -67,9 +67,26 @@
                 중요한 버튼일수록 **크게 만들고(Size)**, **가까이 배치(Distance)**해야 합니다.
             </p>
             <ul style="list-style: disc; padding-left: 1.5rem; color: #4b5563;">
-                <li><strong>터치 타겟:</strong> 모바일 버튼의 최소 터치 영역은 <strong>44x44pt (iOS 기준)</strong> 또는 <strong>48x48dp (Android 기준)</strong> 이상이어야 합니다.</li>
+                <li style="margin-bottom: 0.5rem;"><strong>터치 타겟:</strong> 모바일 버튼의 최소 터치 영역은 <strong>44x44pt (iOS 기준)</strong> 또는 <strong>48x48dp (Android 기준)</strong> 이상이어야 합니다.</li>
                 <li><strong>엄지 존 (Thumb Zone):</strong> 모바일 화면 하단에 주요 기능을 배치하는 이유입니다.</li>
             </ul>
+        </article>
+
+        <article class="article-card">
+            <span class="tag tag-theory">Performance</span>
+            <span class="tag tag-practice">Interaction</span>
+            <h2 class="article-title">3. 도허티 임계 (Doherty Threshold)</h2>
+            <p class="article-desc">
+                "사용자와 시스템 간의 반응 속도가 0.4초(400ms) 이내일 때 생산성이 급격히 향상된다."<br>
+                시스템이 즉각적으로 반응한다고 느낄 때 사용자는 몰입하게 됩니다.
+            </p>
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: 스켈레톤 UI</span>
+                <p class="note-content">
+                    데이터 로딩이 0.4초를 넘길 것 같다면, 멍하니 기다리게 하지 말고 '스켈레톤 UI(뼈대 화면)'나 '로딩 애니메이션'을 보여주세요.
+                    이는 체감 대기 시간을 줄여주는 심리적 트릭입니다.
+                </p>
+            </div>
         </article>
     </main>
     <script src="../js/main.js"></script>
