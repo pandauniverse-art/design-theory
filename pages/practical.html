@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Practical & Modeling - Design Theory Hub</title>
+    <title>Practical - Design Theory Hub</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -11,15 +11,7 @@
         .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
         .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .article-title { color: #b45309; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .director-note { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-        .note-title { font-weight: 700; color: #b45309; margin-bottom: 0.5rem; display: block; }
-        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
-        .tag-theory { background: #fef3c7; color: #92400e; }
-        .tag-practice { background: #dcfce7; color: #15803d; }
-        
-        .sub-section { margin-top: 2.5rem; border-top: 1px dashed #e5e7eb; padding-top: 2rem; }
-        .sub-title { font-size: 1.4rem; font-weight: 700; color: #111827; margin-bottom: 1rem; }
-        .img-placeholder { background: #f3f4f6; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #9ca3af; margin-bottom: 1rem; }
+        .tag { background: #fef3c7; color: #b45309; padding: 4px 12px; border-radius: 20px; font-weight: 600; margin-bottom: 1rem; display: inline-block; }
     </style>
 </head>
 <body>
@@ -29,79 +21,50 @@
             <div class="menu-toggle">☰</div>
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="elements.html" class="nav-link">Elements</a></li>
                 <li><a href="practical.html" class="nav-link" style="color:#f59e0b; font-weight:bold;">Practical</a></li>
+                <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="page-header">
         <div class="container">
-            <h1>💼 Practical & Modeling</h1>
-            <p>3D 모델링의 핵심인 토폴로지(Topology)부터 <br>디자인 시스템 구축과 협업 가이드까지.</p>
+            <h1>💼 Practical</h1>
+            <p>실무에서 바로 사용하는 분석과 비평의 기술입니다.</p>
         </div>
     </header>
 
     <main class="container">
         <article class="article-card">
-            <span class="tag tag-theory">Topology</span>
-            <span class="tag tag-practice">Hard Surface</span>
-            <h2 class="article-title">1. 모델링과 토폴로지 (Modeling & Topology)</h2>
-            <p class="article-desc">
-                좋은 렌더링은 좋은 모델링에서 나옵니다. 특히 표면이 찌글거리지 않고 빛을 예쁘게 맺히게 하려면 
-                폴리곤의 흐름(Edge Flow)을 이해해야 합니다.
-            </p>
-
-            <div class="sub-section">
-                <h3 class="sub-title">1-1. 토폴로지 기본 원칙</h3>
-                <ul style="list-style: disc; padding-left: 1.5rem; color: #4b5563; line-height: 1.8;">
-                    <li><strong>Quads (사각형) 위주 구성:</strong> 삼각형(Tris)이나 N-gon(5각 이상)은 섭디비전(Subdivision) 적용 시 표면이 우글거리는 아티팩트(Artifact)를 유발합니다. 모든 면을 사각형으로 유지하세요.</li>
-                    <li><strong>Edge Flow:</strong> 엣지의 흐름은 근육의 결이나 물체의 구조적 형태를 따라가야 합니다. 특히 관절 부위에는 충분한 엣지 루프(Edge Loop)가 있어야 애니메이션 시 자연스럽게 굽혀집니다.</li>
-                    <li><strong>Holding Edges (Support Loops):</strong> 하드 서페이스 모델링에서 모서리를 날카롭게 유지하려면, 모서리 양옆에 지지해주는 엣지를 추가해야 합니다.</li>
-                </ul>
-            </div>
-
-            <div class="sub-section">
-                <h3 class="sub-title">1-2. UV 매핑과 텍스처링</h3>
-                <p style="margin-bottom: 1rem; color:#4b5563;">
-                    UV를 펴는 것은 3차원 물체의 가죽을 벗겨 2차원 평면에 펼치는 과정입니다. 
-                    체커 보드(Checker Board) 텍스처를 입혀서 왜곡(Distortion)이 없는지, 텍스처 밀도(Texel Density)가 균일한지 확인해야 합니다.
-                </p>
-                <div class="director-note">
-                    <span class="note-title">💡 Director's Note: Bevel은 필수다</span>
-                    <p class="note-content">
-                        현실 세계에 '완벽하게 날카로운 90도 모서리'는 존재하지 않습니다. 아주 미세하게라도 둥글려져 있죠.
-                        3D 모델링 시 모든 모서리에 <strong>Bevel</strong>을 주어야 빛이 모서리에 맺히면서(Highlight) 물체의 형태가 또렷하게 보이고 리얼리티가 살아납니다.
-                    </p>
-                </div>
-            </div>
-        </article>
-
-        <article class="article-card">
-            <span class="tag tag-theory">Atomic Design</span>
-            <span class="tag tag-practice">Scalability</span>
-            <h2 class="article-title">2. 아토믹 디자인 (Atomic Design)</h2>
-            <p class="article-desc">
-                UI 디자인을 넘어, 3D 씬 구성에서도 '모듈화'는 중요합니다.
-                반복되는 에셋을 컴포넌트화(Instancing)하여 메모리를 절약하고 수정 용이성을 높이는 전략입니다.
+            <span class="tag">Topic 01</span>
+            <h2 class="article-title">1. 구도 분석 (Composition Analysis)</h2>
+            <p><strong>약속된 내용:</strong> 삼분할, 대칭/비대칭, 리딩 라인.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                잘 된 포스터나 영상을 볼 때 그냥 지나치지 말고 '구도 선'을 그려보세요.
+                삼분할 교차점에 주제가 있는지, 시선을 유도하는 선(Leading Line)이 어디를 향하는지 분석하는 훈련이 필요합니다.
             </p>
         </article>
 
         <article class="article-card">
-            <span class="tag tag-theory">Collaboration</span>
-            <span class="tag tag-practice">Feedback</span>
-            <h2 class="article-title">3. 전문가의 크리틱 (Design Critique)</h2>
-            <p class="article-desc">
-                "느낌이 별로예요"는 최악의 피드백입니다. 좋은 크리틱은 '목적'과 '근거'를 동반합니다.
+            <span class="tag">Topic 02</span>
+            <h2 class="article-title">2. 디자인 크리틱 방법론 (Critique Methodology)</h2>
+            <p><strong>약속된 내용:</strong> 샌드위치 피드백, 객관적 근거, 해결책 제시.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                "별로예요"는 비평이 아닙니다. 좋은 크리틱은 다음 구조를 가집니다.<br>
+                1. <strong>목적 확인:</strong> "이 디자인의 목표가 20대 타겟팅이었죠?"<br>
+                2. <strong>문제 지적:</strong> "그런데 폰트가 너무 올드해서 타겟층에 맞지 않습니다."<br>
+                3. <strong>대안 제시:</strong> "좀 더 산세리프 계열의 볼드한 서체로 교체해보는 건 어떨까요?"
             </p>
-            <div class="director-note">
-                <span class="note-title">💡 샌드위치 피드백 기법</span>
-                <p class="note-content">
-                    1. <strong>긍정(Positive):</strong> "전반적인 톤앤매너가 브랜드 이미지와 잘 맞네요."<br>
-                    2. <strong>제안(Constructive):</strong> "다만, 배경의 대비가 너무 강해서 메인 오브젝트의 시인성을 해치고 있습니다. 조명을 좀 더 부드럽게 가져가면 어떨까요?"<br>
-                    3. <strong>격려(Positive):</strong> "그 부분만 잡히면 완벽한 포트폴리오가 될 것 같습니다."
-                </p>
-            </div>
+        </article>
+
+        <article class="article-card">
+            <span class="tag">Topic 03</span>
+            <h2 class="article-title">3. 실무 Case Study</h2>
+            <p><strong>약속된 내용:</strong> 성공적인 리브랜딩, UI 개선 전후 비교.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                Airbnb, Toss, Uber 등 성공한 기업들의 디자인 개편 사례를 분석합니다. 
+                그들이 왜 로고를 바꿨는지, 왜 버튼 위치를 옮겼는지에 대한 '비즈니스적 이유'를 탐구합니다.
+            </p>
         </article>
     </main>
     <script src="../js/main.js"></script>
