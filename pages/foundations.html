@@ -11,11 +11,7 @@
         .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
         .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .article-title { color: #1e40af; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .director-note { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-        .note-title { font-weight: 700; color: #1e40af; margin-bottom: 0.5rem; display: block; }
-        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
-        .tag-theory { background: #e0e7ff; color: #4338ca; }
-        .tag-practice { background: #dcfce7; color: #15803d; }
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; background: #eff6ff; color: #1e40af; }
     </style>
 </head>
 <body>
@@ -26,7 +22,7 @@
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="foundations.html" class="nav-link" style="color:#3b82f6; font-weight:bold;">Foundations</a></li>
-                <li><a href="elements.html" class="nav-link">Elements</a></li>
+                <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
@@ -34,62 +30,42 @@
     <header class="page-header">
         <div class="container">
             <h1>📐 Foundations</h1>
-            <p>디자인과 모션의 본질적 뼈대. <br>정지된 화면의 규칙부터 움직임의 물리학까지.</p>
+            <p>메인 페이지에서 약속한 디자인의 3대 핵심 원리입니다.</p>
         </div>
     </header>
 
     <main class="container">
         <article class="article-card">
-            <span class="tag tag-theory">Gestalt Psychology</span>
-            <span class="tag tag-practice">Visual Grouping</span>
-            <h2 class="article-title">1. 게슈탈트 심리학 (Gestalt Psychology)</h2>
-            <p class="article-desc">
-                "뇌는 끊어진 정보를 이어서 인식한다." 인지 심리학의 기초입니다.
-                복잡한 3D 씬을 구성할 때, 시청자가 어디를 그룹으로 묶어 볼지 예측할 수 있습니다.
+            <span class="tag">Topic 01</span>
+            <h2 class="article-title">1. 게슈탈트 이론 (Gestalt Theory)</h2>
+            <p><strong>약속된 내용:</strong> 근접성, 유사성, 연속성, 폐쇄성, 그림-배경 원리.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                사용자는 개별 요소가 아닌 전체적인 형태(Gestalt)를 먼저 인식합니다.
+                UI 디자인에서 서로 가까이 있는 요소(근접성)는 같은 그룹으로 인식되며, 
+                불완전한 형태도 뇌가 스스로 채워서 인식(폐쇄성)한다는 원리를 통해 단순한 아이콘 디자인이 가능해집니다.
             </p>
-            <ul>
-                <li><strong>연속성(Continuity):</strong> 시선은 선이나 흐름을 따라 이동합니다. 모션 경로(Motion Path)를 짤 때 중요합니다.</li>
-                <li><strong>폐쇄성(Closure):</strong> 불완전한 형태도 뇌가 채워서 인식합니다. 로고 디자인이나 미니멀한 3D 아트에 쓰입니다.</li>
-            </ul>
         </article>
 
         <article class="article-card">
-            <span class="tag tag-theory">Animation Principles</span>
-            <span class="tag tag-practice">Motion Graphics</span>
-            <h2 class="article-title">2. 애니메이션 12원칙 (12 Principles of Animation)</h2>
-            <p class="article-desc">
-                디즈니의 애니메이터들이 정립한 움직임의 바이블입니다. 
-                키프레임을 찍을 때 이 원칙들이 들어가야 '죽은 움직임'이 아니라 '살아있는 움직임'이 됩니다.
+            <span class="tag">Topic 02</span>
+            <h2 class="article-title">2. 그리드 시스템 (Grid System)</h2>
+            <p><strong>약속된 내용:</strong> 모듈러 그리드, 컬럼 그리드, 반응형 레이아웃.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                화면을 체계적으로 분할하는 가상의 격자입니다. 
+                특히 현대 웹 디자인에서는 12-Column 그리드가 표준이며, 
+                모든 간격과 크기를 8의 배수로 설정하는 '8pt Grid' 시스템이 실무의 핵심입니다.
             </p>
-            
-            <div style="margin-top: 1.5rem;">
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: #111;">① 스쿼시 앤 스트레치 (Squash and Stretch)</h3>
-                <p style="color: #666; margin-bottom: 1rem;">
-                    물체의 질량감과 유연성을 표현합니다. 공이 바닥에 닿을 때는 납작해지고(Squash), 튀어 오를 때는 길어집니다(Stretch). 
-                    중요한 건 <strong>부피(Volume)는 항상 일정하게 유지</strong>되어야 한다는 점입니다.
-                </p>
+        </article>
 
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: #111;">② 예비 동작 (Anticipation)</h3>
-                <p style="color: #666; margin-bottom: 1rem;">
-                    관객에게 "이제 움직일 거야"라고 예고하는 동작입니다. 
-                    점프하기 전에 무릎을 굽히거나, 총을 쏘기 전에 뒤로 당기는 동작이 이에 해당합니다.
-                </p>
-
-                <h3 style="font-size: 1.2rem; font-weight: 700; color: #111;">③ 타이밍과 스페이싱 (Timing & Spacing)</h3>
-                <p style="color: #666;">
-                    타이밍은 동작의 속도(프레임 수), 스페이싱은 프레임 간의 간격(가속/감속)을 의미합니다. 
-                    그래프 에디터(Graph Editor)에서 **이지 이즈(Easy Ease)**를 만지는 것이 바로 스페이싱 작업입니다.
-                </p>
-            </div>
-
-            <div class="director-note">
-                <span class="note-title">💡 Director's Note: 그래프 에디터</span>
-                <p class="note-content">
-                    초보자는 키프레임만 찍지만, 고수는 그래프를 만집니다.
-                    기계적인 리니어(Linear) 움직임을 피하세요. 현실의 모든 움직임에는 가속과 감속이 있습니다. 
-                    특히 'Overshoot(목표 지점을 살짝 지나쳤다가 돌아오는 것)'을 활용하면 텐션감 있는 모션이 완성됩니다.
-                </p>
-            </div>
+        <article class="article-card">
+            <span class="tag">Topic 03</span>
+            <h2 class="article-title">3. 비례와 균형 (Proportion & Balance)</h2>
+            <p><strong>약속된 내용:</strong> 황금비(Golden Ratio), 삼분할 법칙, 시각적 무게중심.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                <strong>황금비(1:1.618):</strong> 인간이 가장 아름답다고 느끼는 비율입니다. 타이포그래피의 헤드라인과 본문 크기 비율을 정할 때 유용합니다.<br><br>
+                <strong>균형(Balance):</strong> 대칭 균형은 안정감을, 비대칭 균형은 역동성을 줍니다. 
+                디자인 요소의 '시각적 무게(Visual Weight)'를 조절하여 화면의 평형을 유지해야 합니다.
+            </p>
         </article>
     </main>
     <script src="../js/main.js"></script>
