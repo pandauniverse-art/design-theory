@@ -7,16 +7,11 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
-        /* Green Theme */
         .page-header { background: linear-gradient(135deg, #10b981 0%, #047857 100%); color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem; }
         .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
         .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         .article-title { color: #047857; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .director-note { background: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
-        .note-title { font-weight: 700; color: #047857; margin-bottom: 0.5rem; display: block; }
-        .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
-        .tag-theory { background: #d1fae5; color: #065f46; }
-        .tag-practice { background: #dcfce7; color: #15803d; }
+        .tag { background: #d1fae5; color: #047857; padding: 4px 12px; border-radius: 20px; font-weight: 600; margin-bottom: 1rem; display: inline-block; }
     </style>
 </head>
 <body>
@@ -26,7 +21,6 @@
             <div class="menu-toggle">☰</div>
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="foundations.html" class="nav-link">Foundations</a></li>
                 <li><a href="ux-psychology.html" class="nav-link" style="color:#10b981; font-weight:bold;">UX/Psychology</a></li>
                 <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
@@ -36,57 +30,40 @@
     <header class="page-header">
         <div class="container">
             <h1>🧠 UX/Psychology</h1>
-            <p>사용자는 논리적으로 행동하지 않습니다.<br>행동 경제학과 인지 심리학을 통해 사용자의 무의식을 설계하는 법.</p>
+            <p>사용자 경험을 설계하는 3가지 심리학적 기둥입니다.</p>
         </div>
     </header>
 
     <main class="container">
         <article class="article-card">
-            <span class="tag tag-theory">Mental Model</span>
-            <span class="tag tag-practice">Standardization</span>
-            <h2 class="article-title">1. 제이콥의 법칙 (Jakob's Law)</h2>
-            <p class="article-desc">
-                "사용자는 당신의 사이트보다 다른 사이트에서 더 많은 시간을 보낸다."<br>
-                즉, 사용자는 새로운 학습 없이 기존에 익숙한 방식대로 작동하기를 기대합니다. 독창성(Creativity)보다 익숙함(Familiarity)이 사용성에는 더 유리할 수 있습니다.
+            <span class="tag">Topic 01</span>
+            <h2 class="article-title">1. UX 법칙 (UX Laws)</h2>
+            <p><strong>약속된 내용:</strong> 힉의 법칙(Hick's), 피츠의 법칙(Fitts's), 제이콥의 법칙.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                <strong>힉의 법칙:</strong> 선택지가 많을수록 결정 시간은 길어집니다. 메뉴를 단순화하세요.<br>
+                <strong>피츠의 법칙:</strong> 버튼이 클수록, 가까울수록 누르기 쉽습니다. 터치 타겟을 확보하세요.<br>
+                <strong>제이콥의 법칙:</strong> 사용자는 다른 사이트와 같은 방식으로 당신의 사이트가 작동하길 원합니다. 표준을 지키세요.
             </p>
-            <div class="director-note">
-                <span class="note-title">💡 Director's Note: 휠을 재발명하지 마라</span>
-                <p class="note-content">
-                    검색창은 돋보기 아이콘, 장바구니는 우측 상단. 이 불문율을 깨는 순간 사용자는 이탈합니다.
-                    창의성은 레이아웃 구조가 아니라, 콘텐츠와 마이크로 인터랙션에서 발휘하세요.
-                </p>
-            </div>
         </article>
 
         <article class="article-card">
-            <span class="tag tag-theory">Fitts's Law</span>
-            <span class="tag tag-practice">Usability</span>
-            <h2 class="article-title">2. 피츠의 법칙 (Fitts's Law)</h2>
-            <p class="article-desc">
-                "목표물에 도달하는 시간은 거리와 크기에 좌우된다."<br>
-                중요한 버튼일수록 **크게 만들고(Size)**, **가까이 배치(Distance)**해야 합니다.
+            <span class="tag">Topic 02</span>
+            <h2 class="article-title">2. 넛지 디자인 (Nudge)</h2>
+            <p><strong>약속된 내용:</strong> 행동 경제학, 자연스러운 행동 유도.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                강요하지 않고 부드러운 개입으로 사용자의 행동을 변화시키는 설계입니다.
+                구독 취소 버튼을 흐리게 만들거나, 추천 옵션을 기본값(Default)으로 설정하는 것이 대표적인 예시입니다.
             </p>
-            <ul style="list-style: disc; padding-left: 1.5rem; color: #4b5563;">
-                <li style="margin-bottom: 0.5rem;"><strong>터치 타겟:</strong> 모바일 버튼의 최소 터치 영역은 <strong>44x44pt (iOS 기준)</strong> 또는 <strong>48x48dp (Android 기준)</strong> 이상이어야 합니다.</li>
-                <li><strong>엄지 존 (Thumb Zone):</strong> 모바일 화면 하단에 주요 기능을 배치하는 이유입니다.</li>
-            </ul>
         </article>
 
         <article class="article-card">
-            <span class="tag tag-theory">Performance</span>
-            <span class="tag tag-practice">Interaction</span>
-            <h2 class="article-title">3. 도허티 임계 (Doherty Threshold)</h2>
-            <p class="article-desc">
-                "사용자와 시스템 간의 반응 속도가 0.4초(400ms) 이내일 때 생산성이 급격히 향상된다."<br>
-                시스템이 즉각적으로 반응한다고 느낄 때 사용자는 몰입하게 됩니다.
+            <span class="tag">Topic 03</span>
+            <h2 class="article-title">3. 인지 부하 이론 (Cognitive Load)</h2>
+            <p><strong>약속된 내용:</strong> 뇌의 용량 한계, 정보 단순화.</p>
+            <p style="margin-top: 1rem; color: #4b5563;">
+                사용자의 뇌가 한 번에 처리할 수 있는 정보량은 제한적입니다. 
+                불필요한 장식을 제거하고, 정보를 덩어리(Chunking)로 묶어서 제공해야 사용자가 피로감을 느끼지 않습니다.
             </p>
-            <div class="director-note">
-                <span class="note-title">💡 Director's Note: 스켈레톤 UI</span>
-                <p class="note-content">
-                    데이터 로딩이 0.4초를 넘길 것 같다면, 멍하니 기다리게 하지 말고 '스켈레톤 UI(뼈대 화면)'나 '로딩 애니메이션'을 보여주세요.
-                    이는 체감 대기 시간을 줄여주는 심리적 트릭입니다.
-                </p>
-            </div>
         </article>
     </main>
     <script src="../js/main.js"></script>
