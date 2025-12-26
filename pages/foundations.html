@@ -2,35 +2,17 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundations - Design Theory Hub</title>
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <style>
-        /* Header Theme: Blue */
-        .page-header {
-            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-            color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem;
-        }
+        .page-header { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; padding: 6rem 0 4rem; text-align: center; margin-bottom: 3rem; }
         .page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
-        .page-header p { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-
-        /* Article Styles */
-        .article-card {
-            background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem;
-            border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-        .article-title { color: #1e40af; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
-        .article-desc { font-size: 1.1rem; color: #4b5563; margin-bottom: 2rem; line-height: 1.7; }
-        
-        /* Pro Tip Box */
-        .director-note {
-            background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;
-        }
+        .article-card { background: white; border-radius: 16px; padding: 3rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .article-title { color: #1e40af; font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .director-note { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem; }
         .note-title { font-weight: 700; color: #1e40af; margin-bottom: 0.5rem; display: block; }
-        .note-content { font-size: 0.95rem; color: #1e3a8a; }
-
         .tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; margin-bottom: 1rem; }
         .tag-theory { background: #e0e7ff; color: #4338ca; }
         .tag-practice { background: #dcfce7; color: #15803d; }
@@ -43,9 +25,8 @@
             <div class="menu-toggle">☰</div>
             <ul class="nav-menu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="foundations.html" class="nav-link" style="color:var(--primary); font-weight:bold;">Foundations</a></li>
+                <li><a href="foundations.html" class="nav-link" style="color:#3b82f6; font-weight:bold;">Foundations</a></li>
                 <li><a href="elements.html" class="nav-link">Elements</a></li>
-                <li><a href="library.html" class="nav-link">Library</a></li>
             </ul>
         </div>
     </nav>
@@ -53,92 +34,64 @@
     <header class="page-header">
         <div class="container">
             <h1>📐 Foundations</h1>
-            <p>디자인의 본질적 뼈대. <br>시각적 문법(Visual Grammar)과 수학적 원리를 실무 관점에서 재해석합니다.</p>
+            <p>디자인과 모션의 본질적 뼈대. <br>정지된 화면의 규칙부터 움직임의 물리학까지.</p>
         </div>
     </header>
 
     <main class="container">
         <article class="article-card">
-            <span class="tag tag-theory">Theory</span>
-            <span class="tag tag-practice">UI/UX</span>
+            <span class="tag tag-theory">Gestalt Psychology</span>
+            <span class="tag tag-practice">Visual Grouping</span>
             <h2 class="article-title">1. 게슈탈트 심리학 (Gestalt Psychology)</h2>
             <p class="article-desc">
-                "전체는 부분의 합과 다르다." 사용자가 시각 정보를 개별 요소가 아닌 '그룹'으로 인식하는 인지 방식을 설명합니다.
-                복잡한 UI를 단순하고 직관적으로 만드는 핵심 이론입니다.
+                "뇌는 끊어진 정보를 이어서 인식한다." 인지 심리학의 기초입니다.
+                복잡한 3D 씬을 구성할 때, 시청자가 어디를 그룹으로 묶어 볼지 예측할 수 있습니다.
             </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">🔹 근접성의 원리 (Proximity)</h3>
-                    <p style="color:#666;">서로 가까이 있는 요소들은 같은 그룹으로 인식됩니다. 여백(White Space)만으로도 선 없이 그룹핑이 가능합니다.</p>
-                </div>
-                <div>
-                    <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">🔹 공통 영역의 원리 (Common Region)</h3>
-                    <p style="color:#666;">같은 배경색이나 테두리 안에 있는 요소들은 강력하게 그룹화됩니다. 카드 UI 디자인의 기초가 됩니다.</p>
-                </div>
-            </div>
-
-            <div class="director-note">
-                <span class="note-title">💡 Director's Note: 실무 적용</span>
-                <p class="note-content">
-                    복잡한 대시보드를 디자인할 때 선(Line)을 긋는 것을 멈추세요. 대신 여백(Margin)을 조절하세요.
-                    관련된 항목끼리는 8px, 다른 그룹과는 24px 이상 띄우는 것만으로도 사용자의 인지 부하가 획기적으로 줄어듭니다.
-                </p>
-            </div>
-        </article>
-
-        <article class="article-card">
-            <span class="tag tag-theory">Layout</span>
-            <span class="tag tag-practice">Responsive</span>
-            <h2 class="article-title">2. 그리드 시스템 (Grid Systems)</h2>
-            <p class="article-desc">
-                정보를 체계적으로 배치하기 위한 가상의 격자 구조입니다. 인쇄 매체의 모듈러 그리드에서 시작되어, 
-                현재는 웹/앱 환경의 반응형 디자인을 위한 필수 규칙이 되었습니다.
-            </p>
-            
-            <ul style="list-style: disc; padding-left: 1.5rem; color: #4b5563; margin-bottom: 1.5rem;">
-                <li style="margin-bottom: 0.5rem;"><strong>컬럼 그리드 (Column Grid):</strong> 화면을 세로 열(Column)로 나누어 배치. (PC: 12컬럼, Tablet: 8컬럼, Mobile: 4컬럼 표준)</li>
-                <li style="margin-bottom: 0.5rem;"><strong>거터 (Gutter):</strong> 컬럼 사이의 간격. 요소 간의 숨구멍 역할을 합니다.</li>
+            <ul>
+                <li><strong>연속성(Continuity):</strong> 시선은 선이나 흐름을 따라 이동합니다. 모션 경로(Motion Path)를 짤 때 중요합니다.</li>
+                <li><strong>폐쇄성(Closure):</strong> 불완전한 형태도 뇌가 채워서 인식합니다. 로고 디자인이나 미니멀한 3D 아트에 쓰입니다.</li>
             </ul>
-
-            <div class="director-note">
-                <span class="note-title">💡 Director's Note: 8pt Grid System</span>
-                <p class="note-content">
-                    디지털 프로덕트 디자인에서는 '8pt 그리드'가 표준입니다. 모든 마진, 패딩, 크기를 8의 배수(8, 16, 24, 32...)로 설정하세요. 
-                    다양한 스크린 해상도에서 픽셀이 깨지지 않고 렌더링되는 가장 안전한 숫자입니다.
-                </p>
-            </div>
         </article>
 
         <article class="article-card">
-            <span class="tag tag-theory">Visual Weight</span>
-            <span class="tag tag-practice">Conversion</span>
-            <h2 class="article-title">3. 시각적 위계 (Visual Hierarchy)</h2>
+            <span class="tag tag-theory">Animation Principles</span>
+            <span class="tag tag-practice">Motion Graphics</span>
+            <h2 class="article-title">2. 애니메이션 12원칙 (12 Principles of Animation)</h2>
             <p class="article-desc">
-                사용자의 시선이 머무는 순서를 설계합니다. 크기, 색상, 대비를 통해 
-                "무엇을 먼저 보고, 무엇을 나중에 볼지" 디자이너가 통제해야 합니다.
+                디즈니의 애니메이터들이 정립한 움직임의 바이블입니다. 
+                키프레임을 찍을 때 이 원칙들이 들어가야 '죽은 움직임'이 아니라 '살아있는 움직임'이 됩니다.
             </p>
             
-            <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px;">
-                <h3 style="font-size: 1.1rem; margin-bottom: 1rem;">👁️ 시선 추적 패턴 (Eye Tracking)</h3>
-                <ul style="margin-bottom: 0;">
-                    <li style="margin-bottom: 0.5rem;"><strong>F-Pattern:</strong> 텍스트 중심의 웹사이트에서 사용자가 상단과 좌측을 훑어보는 패턴.</li>
-                    <li><strong>Z-Pattern:</strong> 이미지 중심의 랜딩 페이지에서 시선이 좌상단 → 우상단 → 좌하단 → 우하단으로 이동하는 패턴. CTA 버튼은 Z의 끝(우하단)이나 중앙에 배치해야 합니다.</li>
-                </ul>
+            <div style="margin-top: 1.5rem;">
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #111;">① 스쿼시 앤 스트레치 (Squash and Stretch)</h3>
+                <p style="color: #666; margin-bottom: 1rem;">
+                    물체의 질량감과 유연성을 표현합니다. 공이 바닥에 닿을 때는 납작해지고(Squash), 튀어 오를 때는 길어집니다(Stretch). 
+                    중요한 건 <strong>부피(Volume)는 항상 일정하게 유지</strong>되어야 한다는 점입니다.
+                </p>
+
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #111;">② 예비 동작 (Anticipation)</h3>
+                <p style="color: #666; margin-bottom: 1rem;">
+                    관객에게 "이제 움직일 거야"라고 예고하는 동작입니다. 
+                    점프하기 전에 무릎을 굽히거나, 총을 쏘기 전에 뒤로 당기는 동작이 이에 해당합니다.
+                </p>
+
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #111;">③ 타이밍과 스페이싱 (Timing & Spacing)</h3>
+                <p style="color: #666;">
+                    타이밍은 동작의 속도(프레임 수), 스페이싱은 프레임 간의 간격(가속/감속)을 의미합니다. 
+                    그래프 에디터(Graph Editor)에서 **이지 이즈(Easy Ease)**를 만지는 것이 바로 스페이싱 작업입니다.
+                </p>
+            </div>
+
+            <div class="director-note">
+                <span class="note-title">💡 Director's Note: 그래프 에디터</span>
+                <p class="note-content">
+                    초보자는 키프레임만 찍지만, 고수는 그래프를 만집니다.
+                    기계적인 리니어(Linear) 움직임을 피하세요. 현실의 모든 움직임에는 가속과 감속이 있습니다. 
+                    특히 'Overshoot(목표 지점을 살짝 지나쳤다가 돌아오는 것)'을 활용하면 텐션감 있는 모션이 완성됩니다.
+                </p>
             </div>
         </article>
-
-        <div style="text-align: center; margin: 4rem 0;">
-            <a href="../index.html" class="btn-link" style="padding: 1rem 3rem; background: #e5e7eb; border-radius: 50px; color: #4b5563;">메인으로 돌아가기</a>
-        </div>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Design Theory Hub. Contents curated by Gemini.</p>
-        </div>
-    </footer>
-
     <script src="../js/main.js"></script>
 </body>
 </html>
